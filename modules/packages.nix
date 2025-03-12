@@ -1,4 +1,7 @@
 { config, pkgs, ghostty, ... }:
+let
+  thorium = import ./thorium/thorium.nix { inherit pkgs; };
+in
 {
   environment.systemPackages = with pkgs; [
    ############## editors ################
@@ -11,6 +14,12 @@
     vimPlugins.zenbones-nvim
     vim
 
+scala-next
+sbt
+metals
+thorium
+nodePackages.vercel
+
   #################### terminals ##################
     alacritty
     kitty
@@ -20,15 +29,16 @@
     swift
     clang
     ihaskell
+    librewolf
     haskellPackages.webkit2gtk3-javascriptcore
+    nix-output-monitor 
+    scala
     xorg.libX11
     rustc
     cabal-install
     python3
     deno
-    kdePackages.kdeconnect-kde
     nodejs_22
-    vhdl-ls
     linuxPackages.nvidia_x11
     cargo-tauri
     rustup
@@ -202,7 +212,6 @@
     eog
 
     ##### applications ####
-    beeper
     freecad
 
     ###### nvidis ######
@@ -216,4 +225,3 @@
   environment.shells = with pkgs; [ nushell ];
   
 }
-
