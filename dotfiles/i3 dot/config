@@ -12,7 +12,7 @@ floating_modifier $super
 exec --no-startup-id hsetroot -center ~/Downloads/pic.jpg
 
 # start a terminal
-bindsym $super+Return exec kitty
+bindsym $super+Return exec alacritty
 
 # start dmenu (a program launcher)
 bindsym $super+d exec rofi -show drun
@@ -83,6 +83,11 @@ bindsym $super+3 workspace 3
 bindsym $super+4 workspace 4
 bindsym $super+5 workspace 5
 bindsym $super+6 workspace 6
+bindsym $super+7 workspace 7
+bindsym $super+8 workspace 8
+bindsym $super+9 workspace 9
+bindsym $super+0 workspace 10
+
 
 # move focused container to workspace
 bindsym $super+Shift+1 move container to workspace 1
@@ -91,9 +96,14 @@ bindsym $super+Shift+3 move container to workspace 3
 bindsym $super+Shift+4 move container to workspace 4
 bindsym $super+Shift+5 move container to workspace 5
 bindsym $super+Shift+6 move container to workspace 6
+bindsym $super+Shift+7 move container to workspace 7
+bindsym $super+Shift+8 move container to workspace 8
+bindsym $super+Shift+9 move container to workspace 9
+bindsym $super+Shift+0 move container to workspace 10
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $super+BackSpace exec "i3-msg restart"
+
 
 # exit i3
 bindsym $super+q exec "i3-nagbar -t warning -m 'Really, exit?' \
@@ -129,5 +139,22 @@ for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] floating enable
 for_window [class=Eog|Sxiv|feh|mpv|Vlc|File-roller|Xarchiver] focus
 for_window [class=".*"] border pixel 4
 hide_edge_borders smart
-gaps inner 0
+
+exec --no-startup-id nitrogen --restore
+smart_borders on
+for_window [class="^.*"] border pixel 0
+
+#gaps inner 15
+gaps outer 25
+
+# Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
+# gaps inner|outer current|all set|plus|minus <px>
+# gaps inner all set 10
+# gaps outer all plus 5
+
+# Smart gaps (gaps used if only more than one container on the workspace)
+smart_gaps on
+
+
+
 

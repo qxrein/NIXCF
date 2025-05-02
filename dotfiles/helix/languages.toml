@@ -1,0 +1,93 @@
+# Scala
+[[language]]
+name = "scala"
+scope = "source.scala"
+language-servers = ["metals"]
+file-types = ["scala", "sc"]
+auto-format = true
+
+# Flix
+[[language]]
+name = "flix"
+scope = "source.flix"
+language-servers = ["flix-lsp"]
+file-types = ["flix"]
+auto-format = false
+
+[language-server.flix-lsp]
+command = "flix"
+args = ["lsp"]
+
+# Rust
+[[language]]
+name = "rust"
+scope = "source.rust"
+language-servers = ["rust-analyzer"]
+file-types = ["rs"]
+auto-format = true
+
+# Go
+[[language]]
+name = "go"
+scope = "source.go"
+language-servers = ["gopls"]
+file-types = ["go"]
+auto-format = true
+
+# Haskell
+[[language]]
+name = "haskell"
+scope = "source.haskell"
+language-servers = ["hls"]
+file-types = ["hs", "lhs"]
+auto-format = true
+
+# JavaScript
+[[language]]
+name = "javascript"
+scope = "source.js"
+language-servers = ["tsserver"]
+file-types = ["js", "jsx"]
+auto-format = true
+
+# TypeScript
+[[language]]
+name = "typescript"
+scope = "source.ts"
+language-servers = ["tsserver"]
+file-types = ["ts", "tsx"]
+auto-format = true
+
+[language-server.tsserver]
+command = "typescript-language-server"
+args = ["--stdio"]
+
+# Nix
+[[language]]
+name = "nix"
+scope = "source.nix"
+language-servers = ["nil"]
+file-types = ["nix"]
+auto-format = true
+
+# Odin (experimental, basic LSP setup)
+[[language]]
+name = "odin"
+scope = "source.odin"
+language-servers = ["odin-lsp"]
+file-types = ["odin"]
+auto-format = false
+
+[language-server.odin-lsp]
+command = "ols"
+
+# Starlark (generic LSP or use custom parser)
+[[language]]
+name = "starlark"
+scope = "source.starlark"
+language-servers = ["starlark-lsp"]
+file-types = ["star", "bzl", "starlark"]
+auto-format = false
+
+[language-server.starlark-lsp]
+command = "starlark-lsp"

@@ -43,6 +43,7 @@
             ./modules/hyprland.nix
             ./modules/sound.nix
             ./modules/networking.nix
+            ./modules/lsp.nix
             {nixpkgs.overlays = [inputs.hyprpanel.overlay];}
             home-manager.nixosModules.home-manager
             {

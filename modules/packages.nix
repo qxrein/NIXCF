@@ -1,10 +1,11 @@
-{ config, pkgs, ghostty, ... }:
+{ pkgs, pkgs-unstable, ... }:
 let
   thorium = import ./thorium/thorium.nix { inherit pkgs; };
 in
 {
   environment.systemPackages = with pkgs; [
    ############## editors ################
+  lld
     neovim
     helix
     emacsPackages.doom
@@ -13,23 +14,51 @@ in
     vscode
     vimPlugins.zenbones-nvim
     vim
+    appimage-run
+    bazel
+    linuxPackages.cpupower
+    floorp
+    wabt 
 
-scala-next
-sbt
-metals
-thorium
-nodePackages.vercel
+    bazelisk
+    flix
+    clang
+    tldr
+    scala-next
+    lutris
+    scala-cli
+    sbt
+    steam
+    go-sct
+    lsof
+    esptool
+    mkspiffs-presets.esp-idf
+    cni-plugins
+    nodePackages.vercel
+    pkgs-unstable.code-cursor
+    corectrl
+    winetricks
+
+    wasmtime
+    wasm-pack
+    wezterm
+    wasm-tools
+    wasmer
+
+
+    ####################### virtual machine ####################
+    qemu
+
 
   #################### terminals ##################
     alacritty
     kitty
-    ghostty.packages.x86_64-linux.default
+    ghostty
 
   ############## languages and tools ##################
     swift
     clang
     ihaskell
-    librewolf
     haskellPackages.webkit2gtk3-javascriptcore
     nix-output-monitor 
     scala
@@ -38,12 +67,11 @@ nodePackages.vercel
     cabal-install
     python3
     deno
-    nodejs_22
+    nodejs_23
     linuxPackages.nvidia_x11
     cargo-tauri
     rustup
     ghdl
-    zls
     markdown-oxide
     c3c
     android-tools
@@ -121,7 +149,6 @@ nodePackages.vercel
     okular
     tt
     networkmanagerapplet
-    marksman
     lldb
     haskellPackages.jsaddle-webkit2gtk
     nitrogen
@@ -220,8 +247,15 @@ nodePackages.vercel
     vulkan-loader
     vulkan-tools
 
+
+  # browsers ##################
+    thorium
+    librewolf
+
   ];
 
   environment.shells = with pkgs; [ nushell ];
-  
+  fonts.packages = with pkgs; [
+    (google-fonts.override { fonts = [ "Great Vibes" "Noto Kufi Arabic" ]; })
+  ];
 }

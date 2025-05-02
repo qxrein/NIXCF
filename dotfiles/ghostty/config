@@ -1,9 +1,9 @@
 #font-family = BerkeleyMono Nerd Font
 #font-family = Iosevka Nerd Font
 # font-family = SFMono Nerd Font 
-theme = Batman
 shell-integration-features = no-cursor,sudo,no-title
 cursor-style = block
+cursor-color = red
 #background-opacity = 0.9
 mouse-hide-while-typing = true
 mouse-scroll-multiplier = 2

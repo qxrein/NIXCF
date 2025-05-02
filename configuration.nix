@@ -18,6 +18,22 @@
   networking.hostName = "nixos"; # Define your hostname.
   networking.networkmanager.enable = true;
 
+programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+      glibc
+      zlib
+      # Add other required libraries here
+    ];
+  };
+
+
+    boot.kernelParams = [ "intel_pstate=disable" ]; # only if you're using Intel
+    services.udev.extraRules = ''
+      SUBSYSTEM=="cpu", KERNEL=="cpu[0-9]*", ATTR{scaling_governor}="performance"
+    '';
+
+  
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
 

@@ -2,8 +2,8 @@
 #
 # version = "0.100.1"
 
-$env.EDITOR = "nvim"
-$env.VISUAL = "nvim"
+$env.EDITOR = "hx"
+$env.VISUAL = "hx"
 
 # For more information on defining custom themes, see
 # https://www.nushell.sh/book/coloring_and_theming.html
@@ -355,8 +355,14 @@ $env.config = {
 }
 
 alias vi = nvim
-alias zed = zed-editor
+alias zed = zeditor
 alias time = date now
 alias batt = acpi
 use ~/.cache/starship/init.nu
 $env.config.show_banner = false
+$env.PATH = ($env.PATH | prepend ~/.emacs.d/bin)
+$env.PATH = ($env.PATH | split row (char esep) | append "~/.emacs.d/bin")
+$env.ANDROID_HOME = (prepend /home/chikoyeat/Android/sdk)
+
+alias emu8086 = ~/.config/nushell/emu8086_runner.nu
+source ~/projects/nitrolit/nitrolit.nu
