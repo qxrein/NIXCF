@@ -1,5 +1,5 @@
 {
-  description = "chikoyeat's NixOS and Home Manager configuration";
+  description = "qxrein's nixos config";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -29,9 +29,9 @@
         config.allowUnfree = true;
         overlays = [
         inputs.hyprpanel.overlay
-	  ];
+    	  ];
       };
-      theme = themes.tango;
+      theme = themes.tokyo-night-dark;
     in
     {
       nixosConfigurations = {
@@ -91,7 +91,7 @@
               };
 
               # Using templates??? Wow, that's so cool!
-              programs.bat = {
+              programs.thunar = {
                 config.theme = "base16";
                 themes.base16.src = pkgs.writeText "base16.tmTheme" theme.tmTheme;
               };
