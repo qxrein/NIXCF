@@ -22,8 +22,18 @@ in
 
     bazelisk
     flix
+    fzf
     clang
     tldr
+    steam-run
+    hplip
+    cups
+    sane-backends
+    libusb1
+    avahi
+    dbus
+  
+    steamcmd
     scala-next
     lutris
     scala-cli
@@ -146,8 +156,8 @@ in
     mononoki
     font-awesome
     scrot
-    okular
     tt
+    kdePackages.okular
     networkmanagerapplet
     lldb
     haskellPackages.jsaddle-webkit2gtk

@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+        ./modules/print.nix
       (import ./modules/packages.nix { inherit config pkgs pkgs-unstable ghostty; })
     ];
 
@@ -23,17 +24,32 @@ programs.nix-ld = {
     libraries = with pkgs; [
       glibc
       zlib
-      # Add other required libraries here
     ];
   };
+  
+  services={
+    printing = {
+      enable = true;
+      drivers = [ pkgs.hplip ];
+    };
+    avahi = {
+      enable = true;
+      nssmdns4 = true;
+    };
+    dbus.enable = true;
+  };
 
+  hardware.sane.enable = true;
+
+  printing.hpSupport = {
+    enable = true;
+  };
 
     boot.kernelParams = [ "intel_pstate=disable" ]; # only if you're using Intel
     services.udev.extraRules = ''
       SUBSYSTEM=="cpu", KERNEL=="cpu[0-9]*", ATTR{scaling_governor}="performance"
     '';
 
-  
   # Set your time zone.
   time.timeZone = "Asia/Kolkata";
 
@@ -77,8 +93,6 @@ programs.nix-ld = {
 services.displayManager.defaultSession = "none+i3";
   services.upower.enable = true;
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound with pipewire.
   security.rtkit.enable = true;
@@ -119,6 +133,12 @@ services.displayManager.defaultSession = "none+i3";
 
   # Enable Firefox
   programs.firefox.enable = true;
+
+  programs.steam = {
+    enable = true;
+    remotePlay.openFirewall = true; 
+    dedicatedServer.openFirewall = true;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -173,17 +193,12 @@ services.displayManager.defaultSession = "none+i3";
 
   hardware.nvidia = {
 
-    # Modesetting is required.
     modesetting.enable = true;
 
-    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
-    # Enable this if you have graphical corruption issues or application crashes after waking
-    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
-    # of just the bare essentials.
+    forceFullCompositionPipeline = true;
+    nvidiaPersistenced = true;
     powerManagement.enable = false;
 
-    # Fine-grained power management. Turns off GPU when not in use.
-    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
     powerManagement.finegrained = false;
 
     # Use the NVidia open source kernel module (not to be confused with the
