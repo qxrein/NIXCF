@@ -1,9 +1,9 @@
 { inputs, pkgs, ... }:
 
 {
-  # Enable Hyprland
   programs.hyprland.enable = true;
-  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+  environment.sessionVariables.NIXOS_OZONEE_WL = "1";
+
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
   environment.systemPackages = with pkgs; [
@@ -14,14 +14,11 @@
     hypridle
     hyprpaper
 
-    cool-retro-term
-
     starship
     helix
 
-    qutebrowser
-    zathura
     mpv
+    zathura
     imv
   ];
 }

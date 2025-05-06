@@ -1,32 +1,39 @@
-{ config, pkgs, inputs, ... }:
-
+{ config, lib, pkgs, ... }:
 {
-
   home.username = "chikoyeat";
   home.homeDirectory = "/home/chikoyeat";
-  
-  # Basic configuration
   home.stateVersion = "24.05";
-
-  # Let Home Manager manage itself
-  programs.home-manager.enable = true;
-
-  # Packages that should be installed to the user profile
+  
+  # Add packages directly
   home.packages = with pkgs; [
-    # Add your user-specific packages here
+    # Base Thunar packages
+    xfce.thunar
+    xfce.thunar-archive-plugin
+    xfce.thunar-volman
+    hyprpanel
+    waybar
+    
+    # Add any other packages you need
+    gnome-themes-extra  # Fixed: gnome.gnome-themes-extra -> gnome-themes-extra
   ];
 
-  # Program-specific configurations
-  programs = {
-    # Example: Configure git
-    git = {
-      enable = true;
-      userName = "chikoYEAT";
-      userEmail = "manavrj.07@gmail.com";
-    };
-
-    # Add other program configurations here
+  # Basic environment variables
+  home.sessionVariables = {
+    EDITOR = "hx";
   };
-
-  # Add other home-manager configurations here
+  
+  # Basic theming configuration
+  gtk = {
+    enable = true;
+    theme = {
+      name = "Adwaita-dark";
+      package = pkgs.gnome-themes-extra;  # Fixed: gnome.gnome-themes-extra -> gnome-themes-extra
+    };
+  };
+  
+  # Enable Home Manager
+  programs.home-manager.enable = true;
+  
+  # Note: We're not using programs.thunar here as it's causing issues
+  # Instead, we installed the thunar packages directly above
 }

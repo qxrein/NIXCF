@@ -1,161 +1,204 @@
-{ config, pkgs, ghostty, ... }:
+{ config, pkgs, ... }:
+
 {
   environment.systemPackages = with pkgs; [
+   ############## editors ################
+  lld
     neovim
-    upower
+    helix
+    emacsPackages.doom
+    emacs
+    libinput
+    zed-editor
+    evtest
+    jujutsu
+    vscode
+    vimPlugins.zenbones-nvim
+    vim
+    appimage-run
+    bazel
+    linuxPackages.cpupower
+    floorp
+    wabt 
+
+    bazelisk
+    xorg.xinit
+    flix
+    waybar
+    fzf
+    clang
+    lightdm
+    tldr
+    steam-run
+    hplip
+    cups
+    sane-backends
+    libusb1
+    avahi
+    wl-clipboard-rs
+    clipman
+    dbus
+  
+    steamcmd
+    scala-next
+    lutris
+    scala-cli
+    sbt
+    steam
+    go-sct
+    lsof
+    esptool
+    mkspiffs-presets.esp-idf
+    cni-plugins
+    nodePackages.vercel
+    corectrl
+    winetricks
+
+    wasmtime
+    wasm-pack
+    wezterm
+    wasm-tools
+    wasmer
+
+
+    ####################### virtual machine ####################
+    qemu
+
+
+  #################### terminals ##################
     alacritty
-    dmenu
-    swift
+    kitty
+    ghostty
+
+  ############## languages and tools ##################
+    clang
+    ihaskell
+    haskellPackages.webkit2gtk3-javascriptcore
+    scala
+    xorg.libX11
+    rustc
+    cabal-install
+    python3
+    deno
+    nodejs_23
+    linuxPackages.nvidia_x11
+    cargo-tauri
+    rustup
+    ghdl
+    markdown-oxide
+    c3c
+    android-tools
+    go
+    gtk3-x11
+    haskellPackages.gi-atk
+    react-native-debugger
+    cairo
+    bun
+    sqlite
+    git
+    gleam
+    ghc
+    python312Packages.pip
     (lua.withPackages(ps: with ps; [ busted luafilesystem ]))
+    sassc
+    odin
+
+    ## misc ################
+    dmenu
+    wine
+    upower
     gnumake
-    itch
     # libgda
     nix-search
-    krita
+    bluez
+    bluez-tools
     nushell
-    sway
-    nixfmt-rfc-style
     starship
     ripgrep
     nix-prefetch-git
-    warp-terminal
-    emacs
-    zed-editor
-    sassc
     nixpkgs-review
     ags
-    ihaskell
-    ghc
     xarchiver
     pipewire
     networkmanager
-    hyprshade
-    hyprpicker
-    swww
     imagemagick
     libgtop
-    emacsPackages.doom
+    gtop
     nodePackages.prisma
     nodePackages.npm
     p7zip
     sbclPackages.cl-cffi-gtk-gdk-pixbuf
-    python312Packages.pip
     fontconfig    # Essential font management package
-  cantarell-fonts  # Example of a TTF font package
-  dejavu_fonts  # Another example of a TTF font package
+    cantarell-fonts  # Example of a TTF font package
+    dejavu_fonts  # Another example of a TTF font package
     pangolin
     atk
     gdk-pixbuf
-    ghostty.packages.x86_64-linux.default
-    pkgs.hyprpanel
     # appimage-run
-    zlib
-    sqlite
-    git
     ani-cli
     ubuntu-sans
     mdcat
     xscreensaver
     gnome-keyring
     nixfmt-rfc-style
-    haskellPackages.xmonad
-    haskellPackages.xmobar
-    xmonad-with-packages
     acpi
-    pkgs.haskellPackages.xmonad-contrib
-    cudatoolkit 
     gtkwave
-    haskellPackages.webkit2gtk3-javascriptcore
-    vhdl-ls
-    gtk3-x11
-    haskellPackages.gi-atk
     pkgs.atkmm
-    go-sct
-      ubuntu-sans
-      libsoup
-  mononoki
+    ubuntu-sans
+    libsoup_2_4
+    mononoki
     font-awesome
     scrot
-    okular
-    gnomeExtensions.color-picker
     tt
+    kdePackages.okular
     networkmanagerapplet
-    markdown-oxide
-    marksman
-    zls
     lldb
     haskellPackages.jsaddle-webkit2gtk
     nitrogen
-    pasystray
     picom
-    ghdl-llvm
     maim
     htop
     nvtopPackages.full
-    steam
-    xclip
     xdotool
-  xorg.libX11
-  xorg.libXcursor
-  xorg.libXrandr
-  xorg.libXi
-  vulkan-loader
-  wayland
+    xorg.libX11
+    xorg.libXcursor
+    xorg.libXrandr
+    xorg.libXi
+    vulkan-loader
     gtk4
     glib   
     pango
     gobject-introspection
-graphene
-  libxkbcommon
+    libxkbcommon
     polkit_gnome
     pulseaudioFull
     mkdocs
     zip
     maven
     libngspice
-    vscode
     fira-code
     rofi
     octaveFull
     home-manager
     hyperfine
-    vim
-    deno
-    zellij
-    android-studio
     curl
     unrar
-    lutris
     git-credential-manager
-    helix
     lshw
     networkmanager
-    yambar-hyprland-wses
-    yambar
     qemu
-    bun
     obs-studio
     brave
     unzip
-    eww
-    waybar
     libsForQt5.kdenlive
     brightnessctl
     neofetch
-    vimPlugins.zenbones-nvim
-    zsh
-    c3c
     opentabletdriver
-    oh-my-zsh
     opam
     ocamlPackages.utop
     simulide
-    ghdl
-    zsh-completions
     starship
-    zsh-powerlevel10k
     carapace
-    gleam
     vesktop
     zsh-syntax-highlighting
     libreoffice-qt
@@ -164,13 +207,8 @@ graphene
     hunspellDicts.th_TH
     libngspice
     gwe
-    go
-    zsh-history-substring-search
     dunst
-    cargo-tauri
     tree
-    rustc
-    nodejs_22
     pacman
     docker
     cargo
@@ -185,33 +223,36 @@ graphene
     viewnior
     vlc
     webkitgtk
-    cairo
-    rustup
     atk
     pkg-config
-    discord
-    python3
     openssl
     librsvg
     tmux
-    kitty
-    ranger
-    spotifyd
     yazi
     # appimagekit
-    wezterm
-    polybar
     grimblast
-    ungoogled-chromium
     jdk
-    react-native-debugger
     pfetch
     zip
-    davinci-resolve
     eog
+
+    ##### applications ####
+    freecad
+
+    ###### nvidis ######
+        pciutils
+    nvidia-vaapi-driver
+    vulkan-loader
+    vulkan-tools
+
+
+  # browsers ##################
+    librewolf
+
   ];
 
   environment.shells = with pkgs; [ nushell ];
-  
+  fonts.packages = with pkgs; [
+    (google-fonts.override { fonts = [ "Great Vibes" "Noto Kufi Arabic" ]; })
+  ];
 }
-
