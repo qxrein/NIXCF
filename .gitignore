@@ -1,0 +1,12 @@
+*
+!.gitignore
+
+!*.md
+!LICENSE
+
+!*.nix
+!flake.lock
+
+!dotfiles/
+
+!modules/

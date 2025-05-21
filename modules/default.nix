@@ -18,4 +18,8 @@
     jujutsu = import ./common/jujutsu.nix;
     theme = import ./common/theme.nix;
   };
+
+  apps = {
+        thorium = import ./apps/thorium/default.nix;
+  };
 }

@@ -3,6 +3,7 @@ theme = "base16_transparent"
 [editor]
 line-number = "relative"
 true-color = true
+clipboard-provider = "wayland"  # or "wl-copy" / "wl-paste"
 
 [editor.cursor-shape]
 insert = "bar"

@@ -1,36 +1,106 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pkgs-unstable, quickshell, inputs, lib, ... }:
 let
   modules = import ./modules { inherit pkgs; };
 in {
   imports = [
     ./hardware-configuration.nix
-    ./modules/apps/thorium
     modules.system.print
     modules.system.networking
     modules.display.manager
     modules.development.lsp
     modules.common.jujutsu
     modules.common.theme
-    (import ./modules/packages.nix { inherit config pkgs; }) 
+    (import ./modules/system/sound.nix { inherit lib pkgs; })
+    (import ./modules/packages.nix { inherit quickshell config pkgs pkgs-unstable; }) 
+    # (import ./modules/nbfc.nix {inherit config inputs pkgs; }) 
   ];
   
   nixpkgs.config.permittedInsecurePackages = [
     "python-2.7.18.8-env"
   ];
-  
+  # services.acpid.enable = lib.mkForce false;
+
+
+  programs.light.enable = true;
+  nix.optimise.automatic = true;
+  programs.java = {
+    enable = true;
+    package = pkgs.jdk17;  # or pkgs.zulu17 if you prefer Zulu JDK
+  };
+# services.hardware.openrgb.enable = true;
+
+environment.pathsToLink = [ "/libexec" ];
+nix.settings.download-buffer-size = 1073741824;
+
+services.picom.enable = true;
+
+programs.adb.enable = true;
+services.udev.extraRules = let
+    idVendor = "0fce";
+    idProduct = "320d";
+  in ''
+    # Allow access to all devices from this vendor
+    SUBSYSTEM=="usb", ATTR{idVendor}=="${idVendor}", MODE="0666", GROUP="adbusers", TAG+="uaccess"
+
+    # Create symlink for ADB interface
+    SUBSYSTEM=="usb", ATTR{idVendor}=="${idVendor}", ATTR{idProduct}=="${idProduct}", SYMLINK+="android_adb"
+
+    # Create symlink for Fastboot interface
+    SUBSYSTEM=="usb", ATTR{idVendor}=="${idVendor}", ATTR{idProduct}=="${idProduct}", SYMLINK+="android_fastboot"
+  '';
+
+services.xserver = {
+    enable = true;
+    xkb.layout = "us";
+    xkb.model = "pc105";
+    xkb.options = "eurosign:e, compose:menu, grp:caps_toggle";
+    xrandrHeads = [{output = "HDMI-0";primary = true;}{output = "VGA-0";}];
+    xkb.variant = "";
+        desktopManager = {
+      xterm.enable = false;
+      # xfce.enable = true;
+    };
+    defaultDepth = 24;
+      videoDriver = "nvidia";
+      exportConfiguration = true;
+      enableTCP = true;
+      autorun = true;
+    windowManager.i3 = {
+      # enable = true;
+      extraPackages = with pkgs; [
+        dmenu
+        i3status
+        i3lock
+        i3blocks
+      ];
+    };
+  };  
+
+  services.displayManager.sddm.enable = true;
+  services.xserver.desktopManager.plasma6.enable = true;
+  # services.displayManager.defaultSession = "xfce";
+
+  nix.settings.trusted-users = [ "root" "chikoyeat" ];
+  programs.xwayland.enable = true;
+
   nixpkgs.config.allowUnfree = true;
   
+  services.autorandr.enable = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "intel_pstate=disable" ];
-  
+  boot.kernelParams = [
+
+    
+    "nvidia-drm.modeset=1"
+    "intel_pstate=disable"
+  ];
+
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
   
   services.xserver.libinput.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" ];
 
-  apps.thorium.enable = true;
-  
   nix = {
     settings.experimental-features = [ "nix-command" "flakes" ];
     gc = {
@@ -46,10 +116,7 @@ in {
   };
 
   services = {
-    udev.extraRules = ''
-      SUBSYSTEM=="cpu", KERNEL=="cpu[0-9]*", ATTR{scaling_governor}="performance"
-    '';
-    avahi = {
+        avahi = {
       enable = true;
       nssmdns4 = true;
     };
@@ -64,18 +131,8 @@ in {
     gvfs.enable = true;  # For trash and mounting functionality
     tumbler.enable = true;  # For thumbnails
     
-    # Audio config is fully handled in modules.system.sound
-
-    upower.enable = true;
+    # upower.enable = true;
   };
-
-
-    services.xserver = {
-      enable = true;
-      xkb.layout = "us";
-      xkb.variant = "";
-
-    };
 
   security.rtkit.enable = true;
   
@@ -83,27 +140,47 @@ in {
 
   hardware = {
     sane.enable = true;
+    graphics.enable = true;
     bluetooth.enable = true;
-    nvidia = {
-      modesetting.enable = true;
-      powerManagement.enable = false;
-      nvidiaSettings = true;
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
-      prime = {
-        offload = {
-          enable = true;
-          enableOffloadCmd = true;
-        };
-        intelBusId = "PCI:0:2:0";
-        nvidiaBusId = "PCI:01:0:0";
-      };
-    };
   };
+
+hardware.opengl.extraPackages = [ pkgs.mesa.drivers ];
   
+  environment.variables = {
+    LIBVA_DRIVER_NAME = "nvidia";
+    GBM_BACKEND = "nvidia-drm";
+    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
+  boot.kernelModules = [ "nvidia" "acerhdf" "acer-wmi"  ];
+  boot.blacklistedKernelModules = [ "nouveau" ];
+  
+ hardware.nvidia = {
+
+    modesetting.enable = true;
+    # forceFullCompositionPipeline = true;
+    # nvidiaPersistenced = true;
+    # powerManagement.enable = true;
+
+    # powerManagement.finegrained = false;
+    open = true;
+    nvidiaSettings = true;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
+
+
+  hardware.nvidia.prime = {
+      sync.enable = true;
+      		# Make sure to use the correct Bus ID values for your system!
+  		intelBusId = "PCI:0:2:0";
+  		nvidiaBusId = "PCI:01:0:0";
+                  # amdgpuBusId = "PCI:54:0:0"; For AMD GPU
+	};
+
   users.users.chikoyeat = {
     isNormalUser = true;
     description = "Manav";
-    extraGroups = [ "networkmanager" "wheel" "audio" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "adbusers" ];
     shell = pkgs.nushell;
   };
   
@@ -120,8 +197,40 @@ in {
       enable = true;
       libraries = with pkgs; [ glibc zlib ];
     };
-    firefox.enable = true;
   };
+
+  programs.firefox = {
+    enable = true;
+    package = pkgs.librewolf;
+    policies = {
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      Preferences = {
+        "cookiebanners.service.mode.privateBrowsing" = 2; # Block cookie banners in private browsing
+        "cookiebanners.service.mode" = 2; # Block cookie banners
+        "privacy.donottrackheader.enabled" = true;
+        "privacy.fingerprintingProtection" = true;
+        "privacy.resistFingerprinting" = true;
+        "privacy.trackingprotection.emailtracking.enabled" = true;
+        "privacy.trackingprotection.enabled" = true;
+        "privacy.trackingprotection.fingerprinting.enabled" = true;
+        "privacy.trackingprotection.socialtracking.enabled" = true;
+      };
+      ExtensionSettings = {
+        "jid1-ZAdIEUB7XOzOJw@jetpack" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/duckduckgo-for-firefox/latest.xpi";
+          installation_mode = "force_installed";
+        };
+        "uBlock0@raymondhill.net" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+          installation_mode = "force_installed";
+        };
+      };
+    };
+  };
+
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   virtualisation.docker.enable = true;
   xdg.portal = {
     enable = true;
@@ -131,17 +240,6 @@ in {
 
   
   i18n.defaultLocale = "en_IN";
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
 
   fonts = {
     packages = with pkgs; [

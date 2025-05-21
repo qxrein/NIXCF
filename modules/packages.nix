@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs-unstable, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -6,23 +6,70 @@
   lld
     neovim
     helix
-    emacsPackages.doom
-    emacs
+      wayland
+  libglvnd
+  
+  zon2nix
+  openems
+  probe-rs-tools
+  libxkbcommon
+  libsForQt5.qcsxcad
+  dmenu-wayland
+  slstatus
+  iw
+  appcsxcad
+  eww
+    # pnpm
+    python312Packages.venvShellHook
+    cowsay
+    quickshell
+    albert
+    google-chrome
+    csxcad
+    python312Packages.west
+    vscode-extensions.platformio.platformio-vscode-ide
+    devenv
+    mesa
+    wine64
+      mesa.drivers
+    gradle
+    pkgs.temurin-bin-21
+    niri
+    # kicad
+    # eagle
+    wmenu
+    pkgs.ktlint
+    # clapboard
+    jdk17
+    (pkgs.wrapFirefox (pkgs.firefox-unwrapped.override { pipewireSupport = true;}) {})
+    # zulu17
+    ollama
+    wayneko
+    xwayland-satellite
+    rofi-wayland
+      pkgs.qt5.qtgraphicaleffects
+      python312Packages.pip
+      pipx
     libinput
     zed-editor
     evtest
+    # waydroid
     jujutsu
+    mdbook-pdf
+    # claude-code
     vscode
     vimPlugins.zenbones-nvim
     vim
     appimage-run
     bazel
     linuxPackages.cpupower
-    floorp
     wabt 
 
-    bazelisk
+    # bazelisk
     xorg.xinit
+    # rquickshare-legacy
+    code-cursor
+    krita
     flix
     waybar
     fzf
@@ -32,20 +79,20 @@
     steam-run
     hplip
     cups
-    sane-backends
+    # sane-backends
     libusb1
-    avahi
+    # avahi
     wl-clipboard-rs
     clipman
     dbus
   
     steamcmd
-    scala-next
-    lutris
+    # scala-next
+    # lutris
     scala-cli
     sbt
     steam
-    go-sct
+    # go-sct
     lsof
     esptool
     mkspiffs-presets.esp-idf
@@ -54,11 +101,10 @@
     corectrl
     winetricks
 
-    wasmtime
-    wasm-pack
-    wezterm
-    wasm-tools
-    wasmer
+    # wasmtime
+    # wasm-pack
+    # wasm-tools
+    # wasmer
 
 
     ####################### virtual machine ####################
@@ -67,41 +113,43 @@
 
   #################### terminals ##################
     alacritty
-    kitty
+    # kitty
     ghostty
 
   ############## languages and tools ##################
     clang
     ihaskell
-    haskellPackages.webkit2gtk3-javascriptcore
     scala
     xorg.libX11
     rustc
     cabal-install
     python3
-    deno
-    nodejs_23
-    linuxPackages.nvidia_x11
+    pkgs-unstable.deno
+    # linuxPackages.nvidia_x11
     cargo-tauri
     rustup
-    ghdl
     markdown-oxide
     c3c
     android-tools
     go
     gtk3-x11
     haskellPackages.gi-atk
-    react-native-debugger
+    # react-native-debugger
     cairo
     bun
     sqlite
     git
-    gleam
-    ghc
+    # gleam
+    # ghc
     python312Packages.pip
+    python312Packages.requests
+    python313Packages.requests
+    python312Packages.grequests
+    cargo-pio
+    # platformio
     (lua.withPackages(ps: with ps; [ busted luafilesystem ]))
     sassc
-    odin
+    # odin
 
     ## misc ################
     dmenu
@@ -124,7 +172,7 @@
     imagemagick
     libgtop
     gtop
-    nodePackages.prisma
+    # nodePackages.prisma
     nodePackages.npm
     p7zip
     sbclPackages.cl-cffi-gtk-gdk-pixbuf
@@ -138,8 +186,8 @@
     ani-cli
     ubuntu-sans
     mdcat
-    xscreensaver
-    gnome-keyring
+    # xscreensaver
+    # gnome-keyring
     nixfmt-rfc-style
     acpi
     gtkwave
@@ -148,15 +196,10 @@
     libsoup_2_4
     mononoki
     font-awesome
-    scrot
-    tt
     kdePackages.okular
     networkmanagerapplet
     lldb
-    haskellPackages.jsaddle-webkit2gtk
-    nitrogen
     picom
-    maim
     htop
     nvtopPackages.full
     xdotool
@@ -175,9 +218,8 @@
     mkdocs
     zip
     maven
-    libngspice
     fira-code
-    rofi
+    wofi
     octaveFull
     home-manager
     hyperfine
@@ -188,23 +230,23 @@
     networkmanager
     qemu
     obs-studio
-    brave
+    # brave
     unzip
     libsForQt5.kdenlive
     brightnessctl
     neofetch
     opentabletdriver
+    # river
     opam
     ocamlPackages.utop
     simulide
-    starship
-    carapace
+    # carapace
     vesktop
-    zsh-syntax-highlighting
+    # zsh-syntax-highlighting
     libreoffice-qt
-    hunspell
-    hunspellDicts.uk_UA
-    hunspellDicts.th_TH
+    # hunspell
+    # hunspellDicts.uk_UA
+    # hunspellDicts.th_TH
     libngspice
     gwe
     dunst
@@ -214,15 +256,9 @@
     cargo
     gccgo14
     pkg-config
-    davinci-resolve
-    ngspice
-    nvtopPackages.nvidia
-    mongodb-compass
+    # nvtopPackages.nvidia
     postman
-    geeqie
-    viewnior
     vlc
-    webkitgtk
     atk
     pkg-config
     openssl
@@ -230,8 +266,7 @@
     tmux
     yazi
     # appimagekit
-    grimblast
-    jdk
+    # grimblast
     pfetch
     zip
     eog
