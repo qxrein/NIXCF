@@ -26714,3 +26714,2698 @@ thunar .
 cd ~/.confi
 cd ~/.config
 thunar .
+jj st
+jj b set niri
+thunar .
+jj b set niri
+thunar .
+jj b set niri
+thunar .
+jj b set niri
+jj config set --repo snapshot.max-new-file-size 2491304
+jj b set niri
+jj describe -m 'niri'
+jj git push
+thunar ,
+thunar .
+jj git push
+thunar .
+jj b set niri
+jj git push
+jj describe -m 'niri'
+jj st
+jj b set niri
+jj st
+jj b set niri
+jj forget modules/
+jj --help
+ls dotfiles/
+jj files<\n>
+jj track
+jj track --help
+jj --help 
+jj file --help
+jj file track modules/
+jj st
+jj file untrack dotfiles/
+jj file track dotfiles/
+jj st
+jj file --help
+cd projects/NIXCF/
+ls
+hx .gitignore
+jj untrack .
+jj file untrack .
+jj st
+jj untrack dotfiles/
+jj file untrack dotfiles/
+jj st
+jj file track dotfiles/
+jj st
+hx .gitignore
+jj st
+hx .gitignore
+jj st
+jj file track dotfiles/
+jj st
+jj file track dotfiles/*
+jj st
+jj file track dotfiles/ghostty/
+jj st
+ls dotfiles/
+hx dotfiles/.gitignore
+jj st
+jj file track dotfiles
+jj st
+hx .gitignore
+hx dotfiles/.gitignore
+jj st
+jj file track dotfiles
+hx dotfiles/.gi
+hx dotfiles/.gitignore
+jj file track dotfiles
+jj st
+jj restore dotfiles/<\n>
+jj st
+jj b set niri
+jj diff --from 5c3734db9457
+jj file untrack dotfiles/
+jj add dotfiles/<\n>
+jj file add dotfiles/<\n>
+jj st
+jj add dotfiles/<\n>
+jj restore dotfiles/<\n>
+jj st
+cd dotfiles/
+ls
+thunar .
+jj b set niri
+jj fetch niri
+jj git fetch
+jj track niri@origin
+jj b track niri@origin
+jj st
+jj b set niri
+jj describe -m 'niri'
+jj git export<\n>jj git push<\n>
+ls
+cd ..
+cd dotfiles/
+hx .gitignore
+jj st
+cd ../
+jj st
+ls dotfiles/
+jj git fetch
+jj b set niri
+jj describe -m 'niri'
+hx .gitignore
+jj git fetch
+jj st
+ls modules/
+thunar .
+jj git fetch
+batt
+cd projects/
+cd clones/
+git clone https://github.com/zhutoutoutousan/worldquant-miner.git
+cd worldquant-miner/
+cargo build --release
+ls
+cd rust
+cargo build --release
+cargo run --release
+hx shell.nix
+cowsay meow
+pfetch
+cd /etc/nixos/
+ls
+df -h
+nix-collect-garbage
+kicad
+date now
+flatpak upgrade
+batt
+flathub list
+flatpak list
+flathub uninstall kicad
+flatpak uninstall kicad
+flatpak install kicad
+flatpak uninstall kicad
+flatpak install flathub org.kicad.KiCad
+flatpak run org.kicad.KiCad
+flatpak run --env=GDK_BACKEND=x11 org.kicad.KiCad<\n>
+ps aux | grep Xwayland<\n>
+bash
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch<\n>
+sudo hx .
+sudo nixos-rebuild switch<\n>
+cd /etc/nixos/
+sudo hx .
+reboot
+cd /etc/nixos/
+sudo hx .
+hx xfce.nix
+sudo hx xfce.nix
+sudo nixos-rebuild switch<\n>
+sudo hx xfce.nix
+sudo nixos-rebuild switch<\n>
+sudo hx .
+cd /etc/nixos/
+rm -rf xfce.nix
+sudo rm -rf xfce.nix
+sudo nixos-rebuild switch<\n>
+exit
+exit
+cd ~/.config/river
+hx .
+quit
+river exit
+exit
+ls
+cd ~/.config/waybar
+waybar
+batt
+cd projects/
+mkdir BitLab
+cd BitLab/
+npx create-remix@latest .
+cd projects/BitLab/
+npm run dev
+cd projects/BitLab/
+hx .
+np0
+npm run dev
+hx .
+npm run dev
+git init
+git remote add origin https://github.com/qxrein/bitlab.git<\n>git branch -M main<\n>git push -u origin main
+git commit -m "orm"<\n>git push<\n> 
+git add .
+git commit -m "orm"<\n>git push<\n> 
+git remote add origin https://github.com/qxrein/bitlab.git<\n>git branch -M main<\n>git push -u origin main
+git push --set-upstream origin main
+cd projects/BitLab/
+npm run dev
+git add .
+git commit -m "meow"<\n>git push<\n> 
+hx .
+batt
+w
+batt
+hx .
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch<\n>
+sudo hx .
+sudo nixos-rebuild switch<\n>
+openrgb
+reboot
+ls /sys/class/leds/
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch<\n>
+sudo hx .
+sudo nixos-rebuild switch<\n>
+echo 3 | sudo tee /sys/class/leds/smc::kbd_backlight/brightness<\n>
+sudo evtest
+reboot
+systemctl --user status pipewire.service
+systemctl --user restart pipewire.service
+systemctl --user status pipewire.service
+systemctl --user stop pipewire.service
+systemctl --user status pipewire.service
+reboot
+sudo systemctl enable gdm
+sudo systemctl unmask gdm<\n>sudo systemctl enable gdm<\n>sudo systemctl start gdm<\n>
+sudo mount -o remount,rw /<\n>
+sudo systemctl unmask gdm<\n>sudo systemctl enable gdm<\n>sudo systemctl start gdm<\n>
+sudo fsck -f /dev/sdX#<\n>
+cd /etc/nixos/
+sudo hx .
+hx .
+sudo mount -o remount,rw /<\n>
+sudo nixos-rebuild switch<\n>
+systemctl --user status gdm
+sudo mount -o remount,rw /<\n>sudo rm /etc/systemd/system/gdm.service<\n>sudo systemctl unmask gdm<\n>sudo systemctl enable gdm<\n>sudo systemctl start gdm<\n>
+findmnt /<\n>
+lsblk
+<\n>TARGET SOURCE
+mount | grep /etc/nixos<\n>
+findmnt /etc/nixos<\n>
+sudo mount -o remount,rw /etc/nixos<\n>
+sudo mount -o remount,rw /<\n>sudo rm /etc/systemd/system/gdm.service<\n>sudo systemctl unmask gdm<\n>sudo systemctl enable gdm<\n>sudo systemctl start gdm<\n>
+sudo hx .
+sudo nixos-rebuild switch<\n>
+reboot
+flatpak uninstall kicad
+flatpak install kicad
+flatpak uninstall kicad
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch<\n>
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch<\n>
+cd projects/
+mkdir longan
+cd longan/
+ls
+code .
+pio update
+pio pkg update
+platformio project init
+pio pkg update
+hx shell.nix
+nix-shell
+hx shell.nix
+nix-shell
+bash
+nix-shell
+hx shell.nix
+nix-shell
+hx shell.nix
+nix-shell
+hx shell.nix
+nix-shell
+hx shell.nix
+dmesg | tail -30<\n>
+sudo dmesg | tail -30<\n>
+lsusb
+sudo usermod -aG dialout $USER<\n>
+sudo dmesg | tail -30<\n>
+screen /dev/ttyUSB0 115200<\n># or<\n>minicom -b 115200 -D /dev/ttyUSB0<\n>
+nix-shell -p minicom
+sudo dmesg | tail -30<\n>
+sudo usermod -aG plugdev $USER<\n>bash
+sudo usermod -aG plugdev $USER
+bash
+sudo dmesg -w
+sudo usermod -a -G dialout $USER
+systemctl --user status pipewire.service
+systemctl --user start pipewire.service
+systemctl --user status pipewire.service
+systemctl --user staert pipewire.service
+systemctl --user start pipewire.service
+systemctl --user status pipewire.service
+reboo
+reboot
+systemctl --user status pipewire.service
+systemctl --user start pipewire.service
+systemctl --user status pipewire.service
+systemctl --user status wireplumber
+systemctl --user start wireplumber
+systemctl --user status wireplumber
+systemctl --user enable wireplumber
+systemctl --user status wireplumber
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch<\n>
+nix-shell -p nix-info --run "nix-info -m"
+sudo hx .
+sudo nixos-rebuild switch<\n>
+sudo hx .
+sudo nixos-rebuild switch<\n>
+cd ~/.local/share/xorg/Xorg.0.log
+cd /etc/nixos/
+sudo hx .
+hx configuration.nix
+sudo hx configuration.nix
+sudo nixos-rebuild switch<\n>
+reboot
+systemctl --user status wireplumber
+systemctl --user start wireplumber
+systemctl --user status pipewire.service
+cd /etc/nixos/
+sudo hx configuration.nix
+sudo nixos-rebuild switch
+systemctl --user status pipewire pipewire-pulse wireplumber
+# Unmask the user services<\n>systemctl --user unmask pipewire.service<\n>systemctl --user unmask pipewire.socket<\n>systemctl --user unmask pipewire-pulse.service<\n>systemctl --user unmask pipewire-pulse.socket<\n>systemctl --user unmask wireplumber.service<\n><\n># Enable and start them<\n>systemctl --user enable --now pipewire pipewire-pulse wireplumber
+systemctl --user status pipewire pipewire-pulse wireplumber
+sudo hx .
+sudo nixos-rebuild switch
+reboot
+systemctl --user status pipewire pipewire-pulse wireplumber
+systemctl --user restart pipewire pipewire-pulse wireplumber
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo rm /home/chikoyeat/.XAuthority*
+rm -rf /opt/.X0-lock
+sudo rm -rf /opt/.X0-lock
+rm -rf /opt/.X0-lock
+hx .
+startx --:1
+sudo startx --:1
+Xorg -configure
+cd /etc/nixos/
+sudo hx .
+sudo systemctl start display-manager
+i3-config-wizard
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+xwayland
+wayland kicad
+sudo nixos-rebuild switch
+hx ~/.local/share/xorg/Xorg.0.log
+cd /etc/nixos/
+sudo hx .
+hx .
+sudo hx .
+rm -rf /etc/X11/xorg.conf.d/
+sudo rm -rf /etc/X11/xorg.conf.d/
+sudo nixos-rebuild switch
+cd /etc/nixos/
+sudo hx .
+sudo nix0
+df -h
+sudo nixos-rebuild switch
+cd projects/clones/nixpkgs/
+cd ..
+rm -rf nixpkgs/
+git clone https://github.com/NixOS/nixpkgs.git --depth 1<\n>cd nixpkgs
+cd pkgs/development/python-modules/fastconv
+cd pkgs/development/python-modules/
+mkdir fastconv
+cd fastconv/
+hx default.nix
+cd ../../..
+cd ../
+cd pkgs/top-level/all-packages.nix
+hx pkgs/top-level/all-packages.nix
+nix-build -A python3Packages.fastcov
+hx pkgs/top-level/all-packages.nix
+nix-build -A python3Packages.fastcov
+hx pkgs/top-level/all-packages.nix
+nix-build -A python3Packages.fastcov
+hx pkgs/development/python-modules/fastconv/
+mv  pkgs/development/python-modules/fastconv/  pkgs/development/python-modules/fastcov
+nix-build -A python3Packages.fastcov
+hx pkgs/development/python-modules/fastconv/
+hx pkgs/development/python-modules/fastcov/default.nix
+nix-build -A python3Packages.fastcov
+hx pkgs/development/python-modules/fastcov/default.nix
+nix-build -A python3Packages.fastcov
+/nix/store/84iq5qnhgad1b1zyvk6106nydf7jd5hq-python3.13-fastcov-1.16
+.
+ls
+ls lib/
+ls lib/python3.13/site-packages/fastcov.py
+lib/python3.13/site-packages/fastcov.py -v
+python lib/python3.13/site-packages/fastcov.py -v
+git status
+exit
+cd projects/clones/nixpkgs/
+git status
+git add .
+git config user.name<\n>git config user.email<\n>
+git commit -m "python-modules/fastconv: Init at v1.16"<\n>git push<\n> 
+gh pr create --web
+git pull
+git branch init/fastconv
+git status
+git push
+git log
+git remote add fork https://github.com/qxrein/nixpkgs.git<\n>
+git checkout -b init/fastconv<\n>
+git push fork init/fastconv<\n>
+gh pr create --web
+git rebase -i upstream/master<\n>
+git push --force 
+git push fork init/fastconv --force<\n>
+cd pkgs/development/python-modules/fastconv
+cd pkgs/development/python-modules/fastcov
+nix fmt default.nix
+nix-fmt default.nix
+nix-shell -p nix-fmt
+cd ../
+nix-shell -p nix-fmt
+nixfmt default.nix
+cd fastconv/
+cd fastcov/
+nixfmt default.nix
+git status
+git push
+git push fork init/fastconv --force<\n>
+git status
+hx default.nix
+nix fmt default.nix
+nixfmt default.nix
+nix fmt default.nix
+hx .
+nix fmt default.nix
+hx .
+nix fmt default.nix
+gh pr checkout 423044
+gh repo set-default
+git rebase -i upstream/master<\n>
+git add .
+git rebase -i upstream/master<\n>
+git commit -m "python-modules/fastconv: formatting fixes"<\n>git push<\n> 
+git rebase -i upstream/master<\n>
+git push --force<\n>
+git remote add fork https://github.com/qxrein/nixpkgs.git<\n>
+git push fork init/fastconv --force<\n>
+gh help
+gh repo help
+gh repo synv
+gh repo sync
+git push --force<\n>
+git remote add fork https://github.com/qxrein/nixpkgs.git<\n>
+git branch<\n>
+git checkout init/fastconv<\n>
+git push fork init/fastconv --force<\n>
+git status
+git log
+git checkout master
+git log
+git checkout init/fastconv<\n>git cherry-pick 1c10dc1913930b5144121dea6dcf4a2e16a2c1fd<\n>
+git push fork init/fastconv --force<\n>
+git branch<\n>
+git log
+git rebase -i upstream/master<\n>
+git branch<\n>
+git branch -i init/fastconv
+git rebase -i init/fastconv
+git checkout init/fastconv<\n>
+git rebase -i upstream/master<\n>
+git push fork init/fastconv --force<\n>
+git rebase -i upstream/master<\n>
+git push fork init/fastconv --force<\n>
+git rebase -i upstream/master<\n>
+git push fork init/fastconv --force<\n>
+gh pr checkout 385862
+cd projects/clones/nixpkgs/
+ls
+cd pkgs/development/python-modules/fastcov
+hx .
+nix-build -A python3Packages.fastcov
+cd pkgs/development/python-modules/fastcov
+hx .
+cd pkgs/development/python-modules/fastcov
+nix-build -A python3Packages.fastcov
+hx .
+nix-build -A python3Packages.fastcov
+hx .
+nix-build -A python3Packages.fastcov
+hx .
+cd ../../../
+cd ../
+nix-build -A python3Packages.fastcov
+cd pkgs/development/python-modules/fastcov
+hx .
+git status
+git add .
+git commit -m "python-modules/fastconv: suggested fixes"<\n> 
+git push fork init/fastconv --force<\n>
+git rebase -i upstream/master<\n>
+git push fork init/fastconv --force<\n>
+ani-cli 
+pfetch
+hyprlock
+cd ~/.config/niri
+hx .
+pfetch
+neofetch
+wayland
+neofetch
+df -h
+nix-store --gc<\n>
+nix-env --list-generations
+df -h
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+cc ~/projects/
+cd ~/projects/
+cd Melo/
+git pull
+hx flake.nix
+nix develop --experimental-features "nix-command flakes"
+hx flake.nix
+nix develop --experimental-features "nix-command flakes"
+cd /etc/nixos/
+nix develop --experimental-features "nix-command flakes"
+rm -rf devenv.nix
+rm -rf devenv.lock
+nix develop --experimental-features "nix-command flakes"
+hx flake.nix
+nix develop --experimental-features "nix-command flakes"
+nix develop
+hx flake.nix
+rm -rf flake.nix
+sudo hx .
+sudo nixos-rebuild switch
+nix flake init -t github:tadfisher/android-nixpkgs<\n>nix develop<\n>android-studio    # available on x86_64-linux platforms
+hx flake.nix
+nix eval --raw nixpkgs#jdk17
+nix develop
+hx flake.nix
+nix develop
+hx flake.nix
+nix develop
+hx flake.nix
+nix develop
+hx flake.nix
+nix develop
+nix flake lock --update-input devshell<\n>nix flake lock --update-input nixpkgs
+nix develop
+hx flake.nix
+nix flake lock --update-input devshell<\n>nix flake lock --update-input nixpkgs
+nix develop
+cd projects/clones/nixpkgs/
+git checkout main
+git checkout master
+git st
+git status
+git pull
+cd ../
+mkdir shiru
+cd shiru/
+git clone https://github.com/NixOS/nixpkgs.git --depth 1<\n>cd nixpkgs
+cd nixos/
+cd ../
+ls
+cd pkgs/applications/video/shiru/
+cd pkgs/applications/video/
+ls
+mkdir shiru
+hx default.nix
+cd ../../
+cd ../
+cd pkgs/top-level/all-packages.nix
+hx pkgs/top-level/all-packages.nix
+nix-build -A shiru
+cd pkgs/applications/video/shiru/
+hx .
+lx
+ls
+cd ../
+hx default.nix
+mv default.nix ./shiru/
+cd shiru/
+ls
+cd ../../.../../
+cd nixpkgs/
+nix-build -A shiru
+cd pkgs/applications/video/shiru/
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+./result
+ls
+./bin/shiru
+cd ../../../
+cd video/shiru/
+hx .
+nix-fmt default.nix
+nix-shell -p nix-fmt
+cd ../
+nix-shell -p nix-fmt
+cd ../
+nix-shell -p nix-fmt
+cd video/
+cd ../../../
+nix-shell -p nix-fmt
+nix-shell
+cd pkgs/applications/video/shiru/
+hx .
+nix branch init/shiru
+git branch init/shiru
+git checkout init/shiru
+git diff
+git status
+cd ../../../
+cd ../
+git status
+git add .
+git status
+git commit -m "Shiru: init application"<\n> 
+gh pr create --web
+cd projects/clones/nixpkgs/
+cd pkgs/applications/video/shiru/
+cd ../shiru/
+cd nixpkgs/
+cd pkgs/applications/video/shiru/
+./result/bin/shiru
+./ci/nixpkgs-vet.sh
+cd ../../../
+cd ../
+./ci/nixpkgs-vet.sh
+cd pkgs/applications/video/shiru/
+mv default.nix package.nix
+ls 
+cd ../../../../pkgs/top-level/
+hx .
+cd ../../../
+cd nixpkgs/
+nix-build -A shiru
+git status
+git add .
+git status
+git commit -m "Shiru: CI fixes"<\n> 
+git push
+nixfmt
+cd pkgs/applications/video/shiru/
+nixfmt default.nix
+ls
+nixfmt package.nix
+git add .
+git commit -m "Shiru: formatted for CI"<\n> 
+git push
+git rebase -i init/shiru
+git rebase -i HEAD~3
+git push
+git pull
+git pull --depth 1
+git fetch
+git push
+git pull --rebase origin init/shiru<\n>
+git push origin init/shiru<\n>
+git status
+hx package.nix
+nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+hx package.nix
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+nix-prefetch-github RockinChaos Shiru --rev v6.1.4
+nix-shell -i nix-prefetch-github
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+nix-shell -p nix-prefetch-github
+hx .
+nix-shell -p nix-prefetch-github
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+hx shell.nix
+nix-shell --run "node2nix -d"
+mv package.nix default.nix
+nix-shell --run "node2nix -d"
+nixfmt default.nix
+nix-shell --run "node2nix -d"
+mv default.nix package.nix
+hx .
+rm -rf shell.nix
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+nix-shell --run "node2nix -d"
+hx shell.nix
+nix-shell --run "node2nix -d"
+hx shell.nix
+hx package.nix
+hx shell.nix
+hx package.nix
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+cd projects/clones/shiru/nixpkgs/pkgs/applications/video/shiru/
+hx .
+nixfmt package.nix
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+cd ~/projects/
+git clone https://github.com/JafarAkhondali/acer-predator-turbo-and-rgb-keyboard-linux-module<\n>cd "acer-predator-turbo-and-rgb-keyboard-linux-module"<\n>chmod +x ./*.sh<\n>sudo ./install_service.sh
+ls
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+rm -rf shell.nix
+hx .
+df -h
+df =h
+df-h
+df -h
+sudo nix-store --gc<\n>
+df -h
+ls
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+ls
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+nix log /nix/store/d9s5jmpv3dk71qakgw6dxykxrk113ml5-shiru-6.1.4.drv
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+cd /etc/nixos/
+flatpak upgrade
+xwayland rofi -show drun
+sudo nixos-rebuild switch --upgrade
+xwayland-satellite
+xwayland-satellite kicad
+which kicad
+xwayland-satellite  /run/current-system/sw/bin/kicad
+GDK_BACKEND=x11 kicad<\n>
+GDK_BACKEND=wayland kicad<\n>
+ldd $(which kicad) | grep wayland<\n>
+kicad<\n>
+GDK_BACKEND=x11 kicad > ~/kicad.log 2>&1<\n>
+bash
+LIBGL_ALWAYS_SOFTWARE=1 kicad<\n>
+nix-shell -p sway
+cd /etc/nixos/
+nix shell nixpkgs#pciutils -c lspci -d ::03xx
+cd /etc/nixos/
+sudo hx .
+systemctl --user status xserver
+systemctl --user status xserver.service
+sudo nixos-rebuild switch --upgrade
+cd /etc/nixos/
+sudo hx .
+nvtop
+sudo nixos-rebuild switch --upgrade
+sudo hx .
+sudo nixos-rebuild switch
+kicad
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+reboot
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+xfce
+i3
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+cd projects/clones/shiru/nixpkgs/pkgs/applications/video/shiru/
+git pull
+cd projects/clones/shiru/nixpkgs/pkgs/applications/video/shiru/
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+git pull --depth 1
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+cd projects/Melo/
+rm -rf flake.lock
+rm -rf flake.nix
+cd /etc/nixos/
+sudo hx .
+nix flake init -t github:tadfisher/android-nixpkgs<\n>nix develop<\n>android-studio    # available on x86_64-linux platforms
+hx .
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+cd /etc/nixos/
+java -version<\n>javac -version
+sudo nixos-rebuild switch
+java -version<\n>javac -version
+sudo hx .
+sudo nixos-rebuild switch
+java -version<\n>javac -version
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+java -version<\n>javac -version
+hx .
+sudo hx .
+sudo nixos-rebuild switch
+java -version<\n>javac -version
+cd projects/Melo/
+readlink -f $(which javac) | sed 's|/bin/javac||'<\n>
+ls /nix/store/bgskkrbv4gi5fz3w7sh031xxmi39ipc2-openjdk-21.0.7+6/lib/openjdk
+cd /etc/nixos/
+sudo hx .
+nix-shell -p usbutils --run "lsusb"
+sudo nixos-rebuild switch
+adb devices
+lsusb -t<\n>
+nix-shell -p usbutils --run "lsusb"  -t
+nix-shell -p usbutils --run "lsusb -t"
+watch -n 1 lsusb -t<\n>
+bash
+sudo hx .
+sudo nixos-rebuild switch
+htop
+cd projects/Melo/
+git add .
+git commit -m "upgraded jdk and flake"<\n> 
+git push
+git config user.name "vnmeue"
+git config user.email "mnv07@proton.me"
+git push
+git config user.name "qxrein"
+git config user.name "manavrj.07@gmail.com"
+git push
+cd projects/Melo/
+adb devices
+cd projects/Melo/
+git pull
+cd projects/Melo/
+git status
+git log
+nix develop
+cd ../
+cd clones/
+git clone https://github.com/vnmeue/Melo.git
+cd Melo/
+cd projects/clones/Melo/
+java -version<\n>javac -version
+cd projects/clones/Melo/
+hx .
+git status
+git log
+cd projects/clones/Melo/
+which android-studio
+df -h
+cd projects/clones/Melo/
+nbfc set -s 100
+nbfc set -s help
+nbfc set -h
+nbfc set -f
+nbfc set -f help
+nbfc set -f 100
+nbfc set -s 100
+nbfc set -f 3
+nbfc set -f 0.2
+nbfc set -f help
+nbfc set -f -help
+nbfc set -f -h
+nbfc set -f -s
+nbfc set -f -s 100
+cd projects/clones/Melo/
+adb devices
+cd projects/clones/Melo/
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+reboot
+cd /etc/nixos/
+sudo hx ,
+sudo hx .
+sudo light -S 50 # Set backlight to 50%<\n>sudo light -A 10 # Increase backlight by 10%<\n>sudo light -U 10 # Decrease backlight by 10%
+sudo light -S 50
+sudo light -A 10
+sudo light -U 10
+ls -l /sys/class/leds/
+journalctl -b 0 | grep -Ei "backlight|brightness|keyboard|acpi|leds"
+hx 
+sudo hx ,
+sudo hx .
+ls -l /sys/class/leds/
+sudo nixos-rebuild switch
+hostnamectl # Look for "Chassis" and "Model"<\n>sudo dmidecode -s system-product-name # More specific for some systems
+sudo acpi_listen
+ps --no-headers -o comm 1<\n>
+cd /etc/nixos/
+sudo nixos-rebuild switch
+reboot
+cd /etc/nixos/
+cd ~/.config/niri
+sudo hx .
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+nxi flake update
+nix flake update
+df -h
+sudo nix flake update
+nix-store --gc
+cd /etc/nixos/
+sudo hx .
+sudo nix flake update
+sudo nixos-rebuild switch
+sudo nix flake update
+sudo hx .
+sudo nix flake update
+sudo nixos-rebuild switch
+sudo hx .
+df -h
+nix-env --list-generations
+nix-collect-garbage  --delete-old
+sudo nixos-rebuild boot
+df -h
+sudo hx .
+cd projects/clones/Melo/
+adb devices
+sudo hx .
+nix develop
+dfd -hh
+df -h
+nix-store --gc
+sudo nixos-rebuild switch
+sudo nixos-rebuild boot
+df -h
+nix profile list<\n>nix profile history --profile /nix/var/nix/profiles/per-user/$USER/profile<\n>nix profile remove 0..1000<\n>
+sudo du -sh /* | sort -h<\n>sudo du -sh /nix/store/* | sort -h | tail -n 20<\n>
+sudo nix-collect-garbage -d<\n>
+sudo nix store gc<\n>
+sudo nix-collect-garbage --delete-older-than 7d<\n>
+df -h
+sudo nixos-rebuild boot
+manavraj@07
+sudo nixos-rebuild boot
+df -h
+hx ~/.config/waybar/
+htop
+df -h
+sudo nix-store --gc<\n>
+df -h
+cd projects/clones/shiru/nixpkgs/pkgs/applications/video/shiru/
+nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}"
+df 0h
+df -h
+cd projects/clones/shiru/nixpkgs/pkgs/applications/video/shiru/
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" 
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+./result/bin/shiru
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.json
+ls
+cd projects/clones
+mkdir gitshiru
+cd gitshiru/
+git clone https://github.com/RockinChaos/Shiru.git
+cd electron
+ls
+cd Shiru/
+cd electron
+pnpm install
+pnpm start
+hx flake.nix
+rm -rf node_modules/electron/
+pnpm start
+npm start
+electron
+npm i electron
+npm i
+pnpm install
+"pnpm approve-builds<\n>"
+pnpm approve-builds<\n>
+pnpm start
+npm run web:watch" "
+npm run web:watch
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx .
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+df -h
+cd ~/projects/clones/Melo/
+ls
+git status
+adb devices
+adb kill-server
+adb start-server
+adb devices
+cd projects/redbrowser/
+js st
+jj st
+cd projects/redbrowser/
+hx .
+tree
+tree --gitignore
+cd axolotl/
+tree --gitignore
+cd ..
+hx build.zig
+cd axolotl/
+htop
+cd projects/clones/Melo/
+git status
+cd projects/clones/Melo/
+adb devices
+gtop
+htop
+nvtop
+adb devices
+adb kill-server
+adb start-server
+adb kill-server
+adb start-server
+adb kill-server
+adb start-server
+adb kill-server
+adb start-server
+adb kill-server
+adb start-server
+cd projects/clones/Melo/
+cursor .
+nix develop
+hx flake.nix
+cd ../
+mkdir ARDUUUUUUUUUUUAIO
+cd ARDUUUUUUUUUUUAIO/
+hx flake.nix
+nix develop
+cd ../
+hx clones/Melo/devshell.nix
+cd ARDUUUUUUUUUUUAIO/
+hx devshell.nix
+git-credential-manager github login
+java -version<\n>javac -version
+adb kill-server
+adb start-server
+cd projects/lynxproject/
+cd projects/lynxproject/
+nix develop
+ls
+cd ../
+ls ARDUUUUUUUUUUUAIO/
+cd ARDUUUUUUUUUUUAIO/
+ls
+mv flake.nix ../lynxproject/
+mv devshell.nix ../lynxproject/
+cd ..
+rm -rf ARDUUUUUUUUUUUAIO/
+cd lynxproject/
+nix develop
+git -C "/home/chikoyeat/projects/lynxproject" add "flake.nix"
+nix develop
+git -C "/home/chikoyeat/projects/lynxproject" add "devshell.nix"
+df -h
+./gradlew clean --refresh-dependencies<\n>./gradlew build
+nix develop
+cd ../
+rm -rf lynxproject/
+cursor .
+cd projects/Melo/
+cd projects/lynxproject/
+ls
+hx flake.nix
+git clone https://github.com/Gebort/FESTU.Navigator.git lynxproject
+ls
+hx flake.nix
+hx devshell.nix
+nix develop
+ls
+hx flake.nix
+nix develop
+ls
+hx flake.nix
+cd Downloads/
+^unzip FESTU.Navigator-master.zip
+mkdir lynxproject
+thunar .
+cd lynxproject/
+thunar .
+hx flake.nix
+hx devshell.nix
+df -
+df -h
+cd ../
+cd lynxproject/
+hx README.md
+cd projects/lynxproject/
+cursor .
+hx .
+java -version<\n>javac -version
+adb devices
+adb start-server
+adb devices
+adb kill-server
+adb start-server
+adb devices
+cd projects/lynxproject/
+adb devices
+adb kill-server
+adb start-server
+cd projects/lynxproject/
+cd projects/lynxproject/
+adb kill-server
+adb start-server
+cd projects/lynxproject/
+cd Downloads/
+wine unstopsmarthire-2.0.0.exe
+wine help
+wine unstopsmarthire-2.0.0.exe
+dpkg --print-architecture
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild boot
+nix-shell -p wineWow64Packages.wayland
+cd projects/clones/
+git clone https://github.com/xiegengcai/world-quant-brain.git
+cd world-quant-brain/
+python main.py
+hx shell.nix
+df -h
+nix-shell
+rm -rf .venv<\n>nix-shell<\n>
+hx shell.nix
+rm -rf .venv<\n>nix-shell<\n>
+hx shell.nix
+cd projects/clones/
+hx .
+ls
+git clone https://github.com/vnmeue/lynx.git
+cd projects/lynxproject/
+mv devshell.nix ../clones/lynx/
+mv flake.nix ../clones/lynx/
+nix develop
+nix develop
+ls
+cd lynx/
+nix develop
+cd ../clones/lynx/
+git s
+git status
+hx README.md
+adb kill-server
+adb start-server
+git config user.name "mnv07@proton.me"
+cd projects/clones/lynx/
+git add .
+git commit -m "upgraded jdk and flake"<\n> 
+git push
+time
+pkill -9 waybar
+waybar
+pkill -USR1 waybar
+cd ~/.config/waybar/
+waybar &
+pkill -USR1 waybar
+pkill -9 waybar
+pkill -USR1 waybar
+hx .
+hx  ~/.config/waybar/autohide.sh
+chmod +x ~/.config/waybar/autohide.sh
+cd ~/.config/niri/
+hx .
+~/.config/waybar/autohide.sh monitor &
+waybar
+hx ~/.config/waybar/
+waybar
+df -h
+cd /etc/nixos/
+sudo hx .
+sudo nix-store --gc<\n>
+sudo cpupower frequency-set --governor performance
+nix-store --gc
+df -h
+nix-du -s=500MB | dot -Tsvg > store.svg
+nix-shell -p "nix-du" run "-s=500MB | dot -Tsvg > store.svg"
+nix-shell -p nix-du run "-s=500MB | dot -Tsvg > store.svg"
+nix-collect-garbage
+nix-collect-garbage -d
+sudo nix-collect-garbage — delete-older-than 30d
+df -h
+sudo find / -type f -printf '%s %p\n' 2>/dev/null | sort -nr | head -n 1<\n>
+du -ah / | sort -rh | head -n 10<\n>
+find / -type f -exec du -h {} + 2>/dev/null | sort -rh | head -n 10<\n>
+sudo du -sh /nix/store<\n>
+cd /etc/nixos/
+nix-store --optimise
+sudo nixos-rebuild switch<\n>
+sudo du -sh /nix/store
+sudo hx .
+nix flake update
+df -h
+sudo nix flake update
+df -h
+d f-h
+df -h
+sudo nixos-rebuild switch<\n>
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+df -h
+nix-store --gc
+df -h
+cd /etc/nixos/
+sudo hx .
+flatpak list
+which godot
+sudo hx .
+df -h
+df -
+df -h
+flatpak uninstall labymod
+flatpak uninstall optimus
+flatpak uninstall lutris
+df -h
+nvidia-smi<\n>
+cd /etc/nixos/
+df -h
+sudo hx .
+df -h
+cd /etc/nixos/
+nixos-version<\n>
+nixos-info<\n>
+nix run nixpkgs#nixos-info<\n>
+nix run nixpkgs#nix-info<\n>
+df -h
+sudo nixos-rebuild switch<\n>
+sudo nixos-rebuild switch --keep-going<\n>
+sudo hx .
+sudo nixos-rebuild switch --keep-going<\n>
+sudo nixos-rebuild switch boot
+sudo nixos-rebuild boot
+xfce
+niri
+cd ~/.config/niri/
+evtest
+sudo evtest
+ls /sys/class/leds/<\n>
+cd /etc/nixos/
+df -h
+sudo dmidecode -s system-manufacturer<\n>sudo dmidecode -s system-product-name<\n>
+cd /
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild boot
+sudo nixos-rebuild switch boot
+sudo nixos-rebuild switch
+reboot
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+kicad
+glxinfo | grep "OpenGL"<\n>
+nix-shell -p mesa-utils
+LIBGL_ALWAYS_SOFTWARE=1 kicad<\n>
+nvidia-smi<\n>
+__GLX_VENDOR_LIBRARY_NAME=nvidia kicad<\n>
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+MESA_LOADER_DRIVER_OVERRIDE=iris kicad<\n>
+glxinfo | grep -i "OpenGL"<\n>
+echo $XDG_SESSION_TYPE<\n>
+kicad > kicad-log.txt 2>&1<\n>
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+tuigreet
+tuigreet niri
+niri
+df -h
+pfetch
+neofetch
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+df -
+df -h
+cd projects/clones/lynx/
+nbfc set -f -s auto
+nbfc set -s auto
+nbfc set -s 50
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+nvidia-smi<\n>
+glxinfo | grep "OpenGL"<\n>
+nix-shell -p mesa-utils
+cd /
+nix-shell -p mesa-utils
+cd ~
+ls -l /etc/alternatives/glx*<\n>
+sudo update-alternatives --config glx<\n>
+nix-shell -p xorg.glxinfo<\n>
+nix run nixpkgs#xorg.glxinfo<\n>
+ls *.nix
+ls "*.nix"
+ls "*.json"
+nix shell github:nixos/nixpkgs#xorg.glxinfo<\n>
+nix-channel --update<\n>
+glxinfo | grep "OpenGL"<\n>
+nix run nixpkgs#glxinfo
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+glxinfo | grep "OpenGL"<\n>
+reboot
+kicad
+org.kicad
+hx ~/.config/kicad/6.0/kicad_common.json
+hx ~/.config/kicad
+kicad > /tmp/kicad.log 2>&1<\n>less /tmp/kicad.log<\n>
+which kiccad
+which kicad
+flatpak list | grep kicad<\n>
+which org.kicad.KiCad
+flatpak info --show-location org.kicad.KiCad<\n>
+nvidia-offload android-studio<\n>
+nvidia-smi
+df -h
+cd projects/lynxproject/
+hx README.md
+git status
+cd ../clones/lynx/
+git status
+git pull
+nvidia-smi
+nix develop
+hx flake.nix
+nix develop
+hx flake.nix
+nix develop
+hx flake.nix
+cd /etc/nixos/
+sudo hx .
+nix develop
+sudo nixos-rebuild switch
+java -version<\n>javac -version
+nvidia-smi
+adb kill-server
+adb start-server
+cd projects/clones/lynx/
+cursor .
+cd projects/clones/lynx/
+adb kill-server
+adb start-server
+cd projects/clones/lynx/
+nbfc set -s 100
+cd projects/clones/lynx/
+adb kill-server
+adb start-server
+cd projects/clones/lynx/
+java -version<\n>javac -version
+cd projects/clones/lynx/
+./gradlew clean<\n>./gradlew assembleDebug
+git rebase -i HEAD~3
+git push --force
+cd /
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+reboot
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+nbfc auto
+nbfc set -d auto
+nbfc set -s auto
+sudo systemctl stop nbfc_service.service<\n>sudo systemctl disable nbfc_service.service<\n>
+sudo systemctl stop acpid.service<\n>
+sudo nixos-rebuild switch
+sudo systemctl status acpid.service<\n>
+sudo systemctl stop acpid.service<\n>
+sudo systemctl status acpid.service<\n>
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+tree
+ls modules/
+ls modules/cuda/
+ls modules/linux/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+cd /etc/nixos/
+sudo hx .
+sudo systemctl status acpid.service<\n>
+sudo nixos-rebuild switch
+sudo systemctl stop nbfc_service.service<\n>sudo systemctl disable nbfc_service.service
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo systemctl stop nbfc_service.service<\n>sudo systemctl disable nbfc_service.service
+sudo hx .
+sudo nixos-rebuild switch
+cd projects/acer-predator-turbo-and-rgb-keyboard-linux-module/
+ls
+uname -r
+bash
+cd ~/Downloads/
+sudo -E ./nitrosense
+chmod +x nitrosense sudo -E ./nitrosense
+chmod +x nitrosense && ./nitrosense
+bash
+cd ../
+cd projects/clones/
+git clone https://github.com/musikid/acpi_ec/<\n>cd acpi_ec<\n>sudo ./install.sh<\n>modprobe acpi_ec<\n>sudo cat /dev/ec #confirm access to EC
+sudo ./install.sh
+sudo chmod +x ./install.sh
+sudo chmod +x ./install.sh and ./install.sh
+sudo ./install.sh
+bash
+sudo nix-shell -p linuxHeaders gcc make dkms<\n>sudo ./install.sh<\n>
+hx shell.nix
+nix-shell
+sudo nix-shell -p linuxHeaders gcc gnumake dkms<\n>
+hx flake.nix
+nix develop
+git -C "/home/chikoyeat/projects/clones/acpi_ec" add "flake.nix"
+nix develop
+cd projects/clones/lynx/
+rofi
+rofi -show drun
+cd projects/clones/lynx/
+time
+cd projects/clones/lynx/
+cd Downloads/
+thunar .
+curl -F "file=/home/chikoyeat/Downloads/a34a624f-e30c-4481-a96f-06bb304164d4.jpeg" https://lynx-proto.onrender.com/extract-shopping-list
+curl -F "file=@/home/chikoyeat/Downloads/a34a624f-e30c-4481-a96f-06bb304164d4.jpeg" https://lynx-proto.onrender.com/extract-shopping-list
+curl -X H POST "file=@/home/chikoyeat/Downloads/a34a624f-e30c-4481-a96f-06bb304164d4.jpeg" https://lynx-proto.onrender.com/extract-shopping-list
+curl -X POST "file=@/home/chikoyeat/Downloads/a34a624f-e30c-4481-a96f-06bb304164d4.jpeg" https://lynx-proto.onrender.com/extract-shopping-list
+curl -X POST "file=/home/chikoyeat/Downloads/a34a624f-e30c-4481-a96f-06bb304164d4.jpeg" https://lynx-proto.onrender.com/extract-shopping-list
+cd projects/clones/lynx/
+cd /etc/nixos/
+sudo hx .
+sudo nix-shell -p linuxHeaders gcc gnumake dkms<\n>
+sudo nixos-rebuild switch
+cd projects/clones/
+git clone https://github.com/OLIMEX/ESP32-POE.git
+thunar .
+cd ESP32-POE/
+cd projects/clones/shiru/nixpkgs/pkgs/applications/video/shiru/
+ls
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+sudo NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+thunar .
+hx package.nix
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+hx package.nix
+NIXPKGS_ALLOW_INSECURE=1 nix-build -E "with import <nixpkgs> {}; callPackage ./package.nix {}" --option sandbox false
+cd projects/
+git clone https://github.com/qxrein/sarvam.git
+cd sarvam/
+cd projects/clones/Melo/
+hx flake.nix
+hx devshell.nix
+nix develop
+git add .
+cd ~/projects/sarvam/
+cd projects/clones/Melo/
+cd projects/sarvam/
+cursor .
+cd projects/sarvam/
+git push
+cd projects/sarvam/
+cd projects/clones/Melo/
+cd projects/sarvam/
+reboot
+cd ~/.config/niri/
+hx 
+rosfi -show drun
+rofi -show drun
+wayneko
+ineko
+oneko
+cd projects/sarvam/
+cd /etc/nixos/
+sudo hx .
+neofetch
+pfecth
+pfetch
+df -h
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+cd projects/redbrowser/
+zig build run
+jj st
+cd projects/redbrowser/
+./zig-out/bin/red-gpu
+./zig-out/bin/redbrowser
+cd Downloads/
+cd 'ACE API [Gold]/'
+hx flake.nix
+cd projects/
+mkdir fsharp
+cd fsharp/
+ls
+mkdir spaceinvaders
+cd spaceinvaders/
+hx flake.nix
+nix develop
+hx flake.nix
+nix develop
+jj st
+jj init
+jj git init
+jj srt
+jj st
+jj git help
+jj git --help
+jj git remote add main https://github.com/qxrein/spaceinvaders.fs.git
+jj b set main
+jj describe -m 'flakes initialized'
+jj git push
+jj git push --allow-new
+hx .
+nix develop
+cursor .
+git status
+jj st
+jj untrack FSharpSample/
+jj --help
+jj file untrack FSharpSample/
+jj st
+jj b set main
+jj describe -m 'project f# initialized'
+jj git push
+nix develop
+jj st
+jj b set main
+jj describe -m 'saving changes'
+jj git push
+jj st
+jj b set main
+jj describe -m 'initializing modules for game logic'
+jj git push
+jj b set main
+jj describe -m 'minor fixes before sleep'
+jj git push
+jj log
+jj b 
+jj b list
+cd projects/BitLab/
+hx .env
+npm run dev
+hx .
+cursor .
+npm run dev
+git status
+hx .env
+vercel link
+cd projects/BitLab/
+vercel env pull .env
+npm run dev
+hx .
+git add .
+git commit -m "url supabase"<\n> 
+git push
+hx .
+git add .
+git commit -m "url supabase"<\n> 
+git push
+hx .
+git add .
+git commit -m "url supabase"<\n> 
+git push
+hx .env
+cd projects/BitLab/
+hx .
+hx .env
+hx .
+git add .
+git commit -m "url supabase"<\n> 
+git push
+npm run dev
+cd /etc/nixos/
+sudo nixos-rebuild switch --upgrade
+nix flake update
+sudo nix flake update
+cd projects/spicedac/
+cd ../
+cd fsharp/spaceinvaders/
+ls
+git pull
+git pull https://github.com/qxrein/spaceinvaders.fs
+git pull
+git pull https://github.com/qxrein/spaceinvaders.fs
+git pull https://github.com/qxrein/spaceinvaders.fs --allow-unrelated-histories<\n>
+hx Program.fs
+hx Game.fs
+git pull https://github.com/qxrein/spaceinvaders.fs --allow-unrelated-histories<\n>
+cd ../
+rm -rf spaceinvaders/
+git pull https://github.com/qxrein/spaceinvaders.fs
+git clone https://github.com/qxrein/spaceinvaders.fs
+cd spaceinvaders.fs/
+cd /etc/nixos/
+sudo hx .
+sudo nix flake update
+df -h
+sudo nixos-rebuild switch
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+df -h
+sudo du -sh /nix/store
+sudo nix-collect-garbage — delete-older-than 10d
+sudo nix-collect-garbage —delete-older-than 10d
+sudo nix-collect-garbage delete-older-than 10d
+sudo nix-collect-garbage --help
+sudo nix-collect-garbage --delete-older-than 10d
+df -h
+sudo nix store gc
+df -h
+sudo nixos-rebuild switch
+which godot4
+nix uninstall
+nix --help
+nix-env -e godot4<\n>
+nix -p --help
+nix-env -q<\n>
+nix profile remove godot4<\n>
+nix profile remove 'godot4'<\n>
+nix profile wipe-history<\n>
+nix-collect-garbage -d<\n>
+nix store gc<\n>
+df -h
+which blender
+nix profile remove /home/chikoyeat/.nix-profile/bin/blender
+nix profile remove blender
+nix profile list
+whihc godot
+which godot
+which godot4
+df -h
+sudo hx .
+df -h
+df -h
+sudo nixos-rebuild switch
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+df -h
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+df -h
+sudo hx .
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+cd projects/clones/Melo/
+git status
+nix develop
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+cd projects/clones/Melo/
+git pull
+git add .
+git commit -m "release v0.0.75"<\n> 
+git push
+cd projects/clones/Melo/
+git status
+cd projects/clones/Melo/
+cd /etc/nixos/
+sudo hx .
+cd ~/projects/
+cd clones/
+rm -rf nixpkgs/
+df -h
+cd nix/
+ls
+cd ..
+rm -rf nix/
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+df -h
+ls
+cd ls
+ls
+rm -rf ThemeNix/ college-predictor/ strapi/ musicblocks/ pimsync/ way/ 
+df -h
+cd ..
+ls
+rm -rf acer-predator-turbo-and-rgb-keyboard-linux-module/
+df -h
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+ls | where type == "file" | sort-by size -d | first 1<\n>
+bash
+ls -a | where type == "file" | sort-by size -d | first 1<\n>
+find . -type f -exec du -b {} + | sort -nr | head -n 1<\n>
+cd Downloads/
+find . -type f -exec du -b {} + | sort -nr | head -n 1<\n>
+bash
+df -h
+cd /etc/nixos/
+sudo nixos-rebuild switch
+sudo hx .
+nix develop
+cd /etc/nixos/
+sudo hx .
+df -h
+sudo hx .
+df -h
+sudo nixos-rebuild switch
+df -h
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+reboot
+rofi -show drun
+nvtop
+cd ~/.config/niri/
+hx .
+cursor .
+rofi -show drun
+dmenu
+wayrofi
+wrofi
+rofi -show drun
+hx .
+rofi -show drun
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+df -h
+rofi -show drun
+df -h
+rofi -show drun
+openEMS 
+openEMS run
+rofi
+rofi -show drun
+cd /etc/nixos/
+sudo hx .
+df -h
+sudo nixos-rebuild switch
+cd ~
+cd projects/
+mkdir openems
+mkdir demo
+cd demo/
+ls
+cd ../
+mv demo/ openems/
+cd openems/demo/
+ls
+hx flake.nix
+nix develop
+hx flake.nix
+nix develope
+nix develop
+hx .
+nix develop
+hx .
+which openems
+which CSXCAD
+openems
+cd /etc/nixos/
+rofi -show drun
+sudo hx .
+hx .
+which AppCSXCAD<\n>
+nvtop
+rofi -show drun
+prime-run
+flatpak override --user com.heroicgameslauncher.hgl --env=__NV_PRIME_RENDER_OFFLOAD=1 --env=__GLX_VENDOR_LIBRARY_NAME=nvidia<\n>
+nvidia-smi<\n>
+df -h
+nvtop
+gtop
+nvidia-smi<\n>
+rofi -show drun
+gtop
+nvidia-smi<\n>
+nvtop
+rofi -show drun
+flatpak install flathub xyz.armcord.ArmCord
+rofi -show drun
+nvtop
+nvidia-smi<\n>
+rofi -show drun
+df -h
+rofi -show drun
+df -h
+rofi -show drun
+cd /etc/nixos/
+sudo hx .
+albert
+cd /etc/nixos/
+cd /etc/nixos/
+df -h
+albert
+cd /0
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+set $launcher dmenu_path | fzf | xargs swaymsg exec
+bash
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+dmenu-wl 
+dmenu-wl_run 
+cd ~/.config/niri/
+dmenu-wl_path 
+rofi -theme base16-onedark -modi drun,run -show drun
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+ulauncher
+niri validate
+ulauncher
+niri --inspect<\n>
+niri --inspect ulauncher
+niri -- --inspect ulauncher
+niri -- --inspect
+nix-shell -p albert
+sudo hx .
+sudo nixos-rebuild switch
+albert
+albert toggle
+albert$
+librewolf$
+niri msg albert
+niri msg focused-window
+niri msg focused-window albert
+niri msg focused-window --help
+niri msg --help
+niri msg pick-window
+xdg-open firefox
+which ungoogled-chromium
+flathub list
+flatpak list
+flatpak list grep -i "ungoogled" ~/.local/share/applications/*.desktop<\n>
+xdg-open https://example.com<\n>
+ls ~/.local/share/applications/<\n>
+flatpak list grep -i "ungoogled" ~/.local/share/applications/*.desktop<\n>
+flatpak list grep -i "ungoogled"
+df -h
+sudo hx .
+cd ~/.config/niri/
+librewolf
+thunar 
+df -h
+thunar 
+flatpak install flathub de.haeckerfelix.Fragments
+sudo nix-collect-garbage -d<\n>sudo nix-store --gc<\n>
+reboot
+df -h
+cd projects/clones/Melo/
+git status
+cd projects/clones/Melo/
+cd projects/Melo/
+cd projects/clones/Melo/
+git s
+git status
+git add .
+git commit -m "release v0.0.75 and minor performance fixes"<\n> 
+git push
+cd projects/redbrowser/
+./zig-out/bin/redbrowser
+cd projects/clones/
+https://github.com/LubomirJagos/OpenEMS-Antenna-Simulations.git
+git clone https://github.com/LubomirJagos/OpenEMS-Antenna-Simulations.git
+cd OpenEMS-Antenna-Simulations/
+octave .
+cd `Patch Antenna 0/`
+cd ~/Downloads/
+^unzip openems_basics.zip
+csxcad
+cd /etc/nixos/
+sudo hx /
+sudo hx .
+libsForQt5.qcsxcad
+sudo nixos-rebuild switch
+sudo hx .
+nix-store --optimise
+sudo nixos rebuild switch
+sudo nixos-rebuild switch
+sudo hx .
+df -h
+sudo nixos-rebuild switch
+AppCSXCAD 
+cd projects/openems/
+ls
+hx project.m
+nix-shell -p openEMS CSXCAD<\n>
+which openems
+which AppCSXCAD<\n>
+which OpenEms
+which openEMS
+which AppCSXCAD
+sudo find / -name InitCSX.m 2>/dev/null<\n>
+hx shell.nix
+nix-shell
+octave 
+mkdir -p openems-matlab<\n>cd openems-matlab<\n>git clone --depth=1 https://github.com/thliebig/openEMS.git .<\n>
+bash
+hx shell.nix
+cd ~/projects/openems<\n>nix-shell<\n>
+hx shell.nix
+nix-shell
+octave --gui
+octave run
+octave project.m
+octave project.m --gui
+cd projects/openems/
+tree
+git clone https://github.com/thliebig/CSXCAD.git<\n>cd CSXCAD<\n>mkdir build && cd build<\n>cmake ..<\n>make<\n>sudo make install<\n>
+bash
+hx .
+bash
+hx .
+ls 
+ls openEMS-Project/
+ls
+cd openEMS-Project/
+ls
+cd openEMS/
+ls
+cd matlab/
+ls
+cd ..
+ls
+cd ..
+ls
+ls AppCSXCAD
+ls QCSXCAD/
+ls QCSXCAD/linux/
+ls CTB/
+hx .
+AppCSXCAD 
+which AppCSXCAD
+hx .
+chmod +x AppCSXCAD/AppCSXCAD.sh
+hx .
+chmod +x openEMS/openEMS.sh
+ln -s /run/current-system/sw/bin/openEMS ~/projects/openems/openems-matlab/openEMS<\n>ln -s /run/current-system/sw/bin/AppCSXCAD ~/projects/openems/openems-matlab/AppCSXCAD<\n>
+hx AppCSXCAD/AppCSXCAD.sh
+chmod +x AppCSXCAD/AppCSXCAD.sh
+hx openEMS/openEMS.sh
+chmod +x openEMS/openEMS.sh
+cd ..
+ls
+cd temp/
+ls
+hx test.xml
+cd ..
+AppCSXCAD temp/test.xml<\n>
+octave --gui
+cd ~/Downloads/
+cd ~/Downloads/
+cd projects/openems/
+AppCSXCAD temp/test.xml<\n>
+rm -rf temp/
+ls
+cd ../
+cd openems/
+ls
+cd temp/
+ls
+hx test.xml
+openEMS test.xml<\n>
+hx test.xml
+openEMS test.xml<\n>
+cd ../
+rm -rf temp/
+ls
+cd temp/
+ls
+openEMS test.xml<\n>
+cd projects/openems/temp1/
+ls
+openEMS patch_antenna.xml
+AppCSXCAD patch_antenna.xml
+FreeCAD patch_antenna.xml
+octave post_process.m
+ls
+octave post_process.m
+cd ../
+cd temp1/
+openEMS patch_antenna.xml
+AppCSXCAD patch_antenna.xml
+octave post_process.m
+openEMS patch_antenna.xml
+AppCSXCAD patch_antenna.xml
+openEMS patch_antenna.xml
+octave post_process.m
+openEMS patch_antenna.xml
+AppCSXCAD patch_antenna.xml
+octave post_process.m
+reboot
+neofetch
+cuda-rs
+clear
+nu -version
+clear
+shell
+clear
+nu -v
+cd projects/openems/temp1/
+cd projects/openems/
+octave bow.m
+octave
+cd simple_spiral/
+ls
+openEMS simple_antenna.xml
+cd ../
+rm -rf simple_spiral/
+ls
+ls openEMS-Project/openEMS/
+ls openEMS-Project/openEMS/matlab/
+hx openEMS-Project/
+glxinfo | grep "OpenGL renderer"
+export QT_QUICK_BACKEND=opengl<\n>
+bash
+cd bio_antenna/
+ls
+openEMS design.xml
+cd /etc/nixos/
+AppCSXCAD design.xml
+octave 
+ls
+cd port_it1
+cd ../
+l;s
+ls
+cd bio_antenna/
+ls
+cd bio_antenna/
+ls
+openEMS design.xml
+AppCSXCAD design.xml
+openEMS design.xml
+cd projects/openems/
+octave bio_plot_results.m<\n>
+AppCSXCAD design.xml
+cd ~/projects/openems/
+cd bio_antenna/
+ls
+AppCSXCAD design.xml
+openEMS design.xml
+ls
+AppCSXCAD design.xml
+ls
+openEMS design.xml
+AppCSXCAD design.xml
+cd ../temp1/
+openEMS design_params.m
+ls
+openEMS patch_antenna.xml
+AppCSXCAD design.xml
+AppCSXCAD patch_antenna.xml
+hyprlock
+AppCSXCAD design.xml
+att
+batt
+time
+cd projects/
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+sudo hx .
+sudo nixos-rebuild switch
+cd 'ACE API [Gold]/'
+ls
+cd ../
+rm -rf 'ACE API [Gold]/'
+cd 'ACE API [Gold]/'
+ls
+hx flake.nix
+git init<\n>git add flake.nix default.nix
+hx default.nix
+git init<\n>git add flake.nix default.nix
+git status
+nix run .#default.lock
+ls
+ls ../
+ls '../ACE API [Gold]/'
+hx flake.nix
+ls '../ACE API [Gold]/'
+nix run .#default.lock
+hx flake.nix
+nix run .#default.lock
+nix develop
+nix run .#default.lock
+hx default.nix
+nix run .#default.lock
+hx flake.nix
+nix develop
+nix run .#default.lock<\n>git add lock.*  # e.g., lock.x86_64-linux.json<\n>git commit -m "Add lock file"<\n>
+nix build .#default<\n>
+hx flake.nix
+nix build .#default<\n>
+nix run .#default.lock<\n>
+ls
+hx default.nix
+hx flake.nix
+nix run .#default.lock<\n>
+nix build .#default<\n>nix develop<\n>
+hx default.nix
+nix build .#default<\n>nix develop<\n>
+nix run .#default.lock<\n>
+hx default.nix
+nix run .#default.lock<\n>
+hx flake.nix
+hx default.nix
+nix run .#default.lock<\n>
+hx flake.nix
+nix develop
+rm -rf default.nix
+nix develop
+hx flake.nix
+nix develop
+cd projects/openems/
+ls
+hx project.m
+cd temp1/
+AppCSXCAD patch_antenna.xml
+openEMS patch_antenna.xml
+AppCSXCAD patch_antenna.xml
+cd Downloads/
+ls
+cp openems_basics.m ~/projects/openems/
+thunar ,
+thunar 
+cd ../
+cd temp/
+cd ../
+rm -rf temp/
+cd temp1/
+cd ../
+ls
+cd openems_basics/
+rm -rf temp/
+ls
+cd temp/
+openEMS test.xml
+AppCSXCAD test.xml<\n>
+cd ../
+ls
+cd openems_basics/meander_temp/
+AppCSXCAD meander.xml
+openEMS meander.xml
+mv post_processign.m ../
+ls
+mv post_processign.m ../
+ld
+ls
+AppCSXCAD meander.xml
+ls
+rm -rf meander_temp/
+ls
+openEMS meander.xml
+AppCSXCAD meander.xml
+cd ../
+ls meander_temp/
+cd meander_temp/
+ls
+ls meander_temp/
+cd meander_temp/
+openEMS meander.xml
+AppCSXCAD meander.xml
+ls
+cd meander_3d_enhanced/
+ls
+AppCSXCAD meander.xml
+cd ~/projects/openems/
+cd openems_basics/
+ls
+cd meander_temp/
+ls
+ls meander_temp/
+cd ../
+cotave
+octave
+ls meander_temp/
+octave
+ls
+hx meanderstrip.m
+octave
+hx post_processign.m
+ls
+cd meander_temp/meander_temp/meander_temp1/
+ls
+openEMS meander.xml
+AppCSXCAD meander.xml
+openEMS meander.xml
+CSXCAD
+AppCSXCAD meander.xml
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch
+qtdiag qxcad
+cd projects/
+git clone https://github.com/qxrein/QCSXCAD-rs.git
+rm -rf .git
+cd QCSXCAD-rs/
+git init
+git remote add origin https://github.com/qxrein/QCSXCAD-rs.git<\n>git branch -M main<\n>git push -u origin main
+git remote remove master
+git remote remove main
+git remote 
+git remote remove origin
+git remote add origin https://github.com/qxrein/QCSXCAD-rs.git<\n>git branch -M main<\n>git push -u origin main
+hx README.md
+ls
+hx README
+cd ../
+git clone https://github.com/thliebig/AppCSXCAD.git
+cd AppCSXCAD/
+rm -rf .git
+git init 
+git remote add origin https://github.com/qxrein/AppCSXCAD-rs.git<\n>git branch -M main<\n>git push -u origin main
+git commit -m "first commit"<\n>git branch -M main<\n>git remote add origin https://github.com/qxrein/AppCSXCAD-rs.git<\n>git push -u origin main
+git add .
+git commit -m "first commit"<\n>git branch -M main<\n>git remote add origin https://github.com/qxrein/AppCSXCAD-rs.git<\n>git push -u origin main
+git remote remove origin
+git commit -m "first commit"<\n>git branch -M main<\n>git remote add origin https://github.com/qxrein/AppCSXCAD-rs.git<\n>git push -u origin main
+git push -u origin main
+git push
+git remote add origin https://github.com/qxrein/AppCSXCAD-rs.git<\n>git branch -M main<\n>git push -u origin main
+nix develop
+git -C "/home/chikoyeat/projects/AppCSXCAD" add "flake.nix"
+ls
+AppCSXCAD meander.xml
+cd ../
+ls
+cd meander_3d_enhanced/
+ls
+cd ../meander_temp1/
+ls
+thunar .
+cd projects/AppCSXCAD/
+ls
+cursor .
+cargo run -p appcsxcad-rs
+cargo run -p appcsxcad-rs --verbose
+nix develop
+rm -rf flake.lock
+cd projects/openems/openems_basics/meander_temp/meander_temp/meander_3d_enhanced/
+ls
+AppCSXCAD meander.xml
+AppCSXCAD meander.xml
+cd projects/AppCSXCAD/
+cursor .
+cd /etc/nixos/
+sudo nixos-rebuild switch --upgrade
+ls
+cd meander_temp/
+ls
+cd meander_fast_test/
+ls
+AppCSXCAD meander.xml
+cd ../
+cd meander_fast_test/crazy_heatmap/
+AppCSXCAD meander.xml
+ls
+AppCSXCAD heatmap.xml
+openEMS heatmap.xml
+openEMS meander.xml
+AppCSXCAD meander.xml
+ls
+cd crazy_heatmap/
+cd projects/openems/openems_basics/meander_temp/meander_temp/meander_3d_enhanced/
+ls
+openEMS meander.xml
+ls
+opls
+ls
+cd meander_3d_enhanced/
+ls
+openEMS meander.xml
+cd projects/
+mkdir cpptraits
+cd cpptraits/
+ls
+trait.cpp
+hx trait.cpp
+gcc trait.cpp
+hx trait.cpp
+gcc trait.cpp
+clear
+gcc trait.cpp
+cargo run trait.rs
+rustc trait.rs
+clear
+rustc trait.rs && ./trait
+rustc trait.rs and ./trait
+rustc trait.rs | ./trait
+rustc trait.rs ; ./trait
+bash
+hx shell.nix
+nix-shell
+vim .
+$env
+hx ~/.config/nushell/config.nu
+hx ~/.config/nushell/env.nu
+cd ~/.config/nushell/env.nu
+hx .
+ls -r | where type == file | get size | math sum<\n>
+ls ** | where type == file | get size | math sum<\n>
+cd ..
+ls --du | get size | math sum<\n>
+du -sb . | awk '{print $1}'<\n>
+bash
+cd projects/clipBZ/
+ls --du ** | where type == file | sort-by size -r | first 5 | update size {|it| $it.size / 1_048_576 | into float } | select name size<\n>
+cd ../
+ls --du ** | where type == file | sort-by size -r | first 5 | update size {|it| $it.size / 1_048_576 | into float } | select name size<\n>
+cd powerlevel10k/
+ls --du ** | where type == file | sort-by size -r | first 5 | update size {|it| $it.size / 1_048_576 | into float } | select name size<\n>
+ls --du ** | where type == file | sort-by size -r | first 5 | update size {|it| $it.size / 1_048_576 | into float } | select name size<\n>
+while true { sys | get cpu mem | table; sleep 1sec; clear }<\n>
+ls --du | where type == dir | sort-by size -r | select name size<\n>
+cd /etc/nixos/
+sudo hx .
+cd ~/projects/
+ls
+cd 'ACE API [Gold]/'
+ls
+gx flake.nix
+hx flake.nix
+:q
+cd ~
+hx .
+hx .
+hx ~/.config
+cd ~/.config
+rm -rf waybar
+git clone --depth 1 --filter=blob:none --sparse https://github.com/adxthya/nix-dotfiles.git<\n>cd nix-dotfiles<\n>git sparse-checkout set .config/waybar<\n>
+cd ~/.config
+cd nix-dotfiles/
+mv .config/waybar/ ../
+cd ../waybar/
+ls
+cd ../
+rm -rf nix-dotfiles/
+niri
+cd waybar/
+niri
+cd ~/.config/waybar/
+ls
+thunar .
+hx .
+niri
+qdbus org.kde.Shutdown /Shutdown logout
+qdbus org.kde.ksmserver /KSMServer logout 0 0 2
+qdbus org.kde.ksmserver /KSMServer logout 1 0 3
+niri
+logout
+exit
+cd ~/.config/waybar/
+waybar
+pkill waybar && hyprctl dispatch exec waybar
+bash pkill waybar && hyprctl dispatch exec waybar
+sleep 1 && waybar &
+cd ~/.config/niri
+hx .
+niri
+hx .
+niri
+cd ../waybar/
+hx .
+waybar
+hx .
+systemctl --user list-units | grep waybar<\n>
+mkdir -p ~/.config/systemd/user<\n>nano ~/.config/systemd/user/waybar.service<\n>
+cd ../
+rm -rf waybar/
+mkdir waybar
+cd waybar/
+git clone https://github.com/WhiteBaiYi/waybar-dotfile.git
+cd ~/.config/niri
+bash
+cd projects/
+cd ../
+cd /etc/nixos/
+sudo hx .
+sudo nixos-rebuild switch --upgrade
+quickshell 
+quickshell -p shell.qml
+sudo hx  .
+cd ~/projects/clones/
+cd ~/.config/
+rm -rf waybar/
+git clone https://github.com/RYLKYA/rylkya.dotfiles
+cd rylkya.dotfiles/
+mv .config/waybar/ ~/.config/
+ls
+cd waybar/
+cd ~/.config/niri
+hx .
+niri
+cd ~/.config/niri
+hx .
+cd ~/.config/waybar/
+hx .
+cd ../niri/
+hx .
+cd /etc/nixos/
+sudo hx ,
+sudo hx .
+sudo nixos-rebuild switch --upgrade
+quickshell -p shell.qml
+cd ~/.config/niri
+cd /etc/nixos/
+sudo hx .
+i3status.conf
+sudo nixos-rebuild switch --upgrade
+sudo hx .
+sudo nixos-rebuild switch --upgrade
+slabtop 
+sudo slabtop 
+slstatus
+slstatus --help
+slstatus -1
+slstatus -v
+slstatus -s
+cd ~/projects/clones/
+git clone https://github.com/Aylur/dotfiles.git<\n>cp -r dotfiles/.config/eww ~/.config/eww<\n>cp -r dotfiles/.config/hypr ~/.config/hypr<\n>mv ~/.config/hypr/_hyprland.conf ~/.config/hypr/hyprland.conf
+mkdir ayhgs
+cd ayhgs/
+cd /etc/nixos/
+git clone https://github.com/Aylur/dotfiles.git<\n>cp -r dotfiles/.config/eww ~/.config/eww<\n>cp -r dotfiles/.config/hypr ~/.config/hypr<\n>mv ~/.config/hypr/_hyprland.conf ~/.config/hypr/hyprland.conf
+sudo hx .
+sudo nixos-rebuild switch --upgrade
+eww
+eww reload
+eww  --force-wayland
+eww daemon
+eww  --force-wayland
+eww status
+eww
+eww reload
+eww list-windows
+eww open bar2
+eww open bar0
+eww open bar1
+eww restart
+eww reload
+cd ~/.config/waybar
+hx /
+cd projects/clones/
+git clone https://github.com/LawnGnome/niri-taskbar.git
+cd niri-taskbar/
+ls
+hx .
+https://github.com/LawnGnome/niri-taskbar.git
+pkill -9 waybar
+cd ~/.config/waybar
+hx .
+home-manager 
+systemctl --user list-units | grep waybar<\n>
+systemctl --user list-units
+systemctl --user list-units | grep home-manager
+systemctl --user status home-manager
+which waybar<\n>
+bash
+cd ~/.config/waybar
+hx .
+cd ~/.config/niri
+hx .
+cd ~/.config/niri
+sleep 1 && waybar & sleep 5 && pkill waybar && sleep 1 && waybar &
+bash
+pkill -9 waybar && waybar
+pkill -9 waybar | waybar
+systemctl --user status home-manager
+cd ~/.config/waybar/
+hx .
+hx ~/.config/waybar/scripts/system_status.sh
+chmod +x ~/.config/waybar/scripts/system_status.sh<\n>
+~/.config/waybar/scripts/system_status.sh
+cd ~/.config/waybar/
+hx .
+cd ~/.config/niri/
+hx .
+cd ~/.config/waybar/
+hx .
+systemctl --user status waybar/
+systemctl --user status waybar
+systemctl --user stop waybar.service<\n>systemctl --user disable waybar.service<\n>
+cd ~/.config/niri/
+hx .
+cd ~/.config/hypr
+ls
+hx hyprpanel.conf
+hx hyprpaper.conf
+niri
+hx ~/.config/hypr/hyprpaper.conf
+niri
+hx ~/.config/hypr/hyprpaper.conf
+hc ~/.config/waybar/
+hx ~/.config/waybar/
+cd ~/.config/hypr
+cd ~/.config/waybar/
+hx .
+cd ~/.config/niri
+swaybg
+hx .
+cd ~/projects/NIXCF/
+cd /etc/nixos/
+thunar .
+thunar .
+cd ~/.config/
+hx .
+thunar .
+jj b set main
+jj b set niri
+jj status
+jj describe -m 'finallly stable config'
+jj git push
+jj st
+jj bookmark list<\n>
+jj bookmark set hyprland -r 539bec61<\n>
+jj git push --remote origin --allow-new --branch niri<\n>
+jj git push
+jj git push --remote origin --allow-new --force --branch niri<\n>
+jj git fetch<\n>
+jj st
+jj b set niri
+jj b
+jj b list
+jj git fetch<\n>
+jj rebase -d @git<\n>
+jj rebase -s ours @git<\n>
+jj rebase --destination '@git'<\n>
+jj rebase --destination '@git' -s ours<\n>
+jj git push --remote origin --allow-new<\n>
+jj b set niri
+cd ../
+rm -rf NIXCF/
+git clone https://github.com/qxrein/NIXCF.git
+cd NIXCF/
+jj git fetch
+git fetch
+git pull
+git branch
+hx .
+thunar .
+cd ~/.config/
+thunar .
