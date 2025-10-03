@@ -1,6 +1,6 @@
 # NIXCF
 
-chikoyeat's NixOS Configuration.
+rein's NixOS Configuration.
 
 ## License
 ```
