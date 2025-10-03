@@ -8,5 +8,6 @@
 !flake.lock
 
 !dotfiles/
+!dotfiles/**
 
 !modules/

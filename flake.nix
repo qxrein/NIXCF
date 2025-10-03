@@ -33,6 +33,11 @@
         inherit system;
         config.allowUnfree = true;
         overlays = [
+          (final: prev: {
+            rabbitmq-server = prev.rabbitmq-server.overrideAttrs (old: {
+              doInstallCheck = false;
+            });
+          })
           nixgl.overlay
          ];
       };
@@ -41,8 +46,9 @@
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
         specialArgs = {
-          inherit inputs pkgs quickshell pkgs-unstable;
-        };
+            inherit inputs pkgs quickshell pkgs-unstable;
+          };
+
        modules = [
           ./configuration.nix
           ./modules/niri.nix
@@ -50,7 +56,6 @@
           ./modules/apps/thorium
 
           inputs.home-manager.nixosModules.home-manager
-
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;

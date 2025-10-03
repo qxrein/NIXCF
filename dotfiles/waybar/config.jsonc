@@ -1,0 +1,92 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 0,
+  "spacing": 0,
+  "margin-top": 20,
+  "margin-bottom": -10,
+  "margin-left": 200,
+  "margin-right": 200,
+
+  "modules-left": [
+    "niri/workspaces"
+  ],
+  "modules-center": [
+    "custom/system-status"
+  ],
+  "modules-right": [
+    "battery",
+    "mpris",
+    "tray",
+    "pulseaudio"
+  ],
+
+  "niri/workspaces": {
+    "all-outputs": true,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "•",
+      "2": "२",
+      "3": "३",
+      "4": "४",
+      "5": "५",
+      "6": "६",
+      "7": "७",
+      "8": "८",
+      "9": "९",
+      "10": "१०",
+      "active": "",
+      "default": ""
+    },
+    "disable-click": false
+  },
+
+  "niri/window": {
+    "format": "{app_id}",
+    "separate-outputs": true,
+    "icon": true,
+    "icon-size": 18
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 4
+  },
+
+  "pulseaudio": {
+    "format": "<span font='Font Awesome 5 Free'>{icon}</span>  {volume}",
+    "format-muted": "<span font='Font Awesome 5 Free'>\uf6a9</span>",
+    "format-icons": {
+      "headphone": "\uf025",
+      "default": ["\uf028"]
+    },
+    "tooltip-format": "{volume}% {desc}",
+    "on-click": "pamixer -t"
+  },
+
+  "custom/system-status": {
+    "exec": "bash ~/.config/waybar/scripts/system_status.sh",
+    "interval": 10,
+    "format": "{}",
+    "tooltip": false
+  },
+
+  "mpris": {
+    "format": "DEFAULT: {player_icon} {dynamic}",
+    "format-paused": "DEFAULT: {status_icon} <i>{dynamic}</i>",
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    }
+  },
+
+ "battery": {
+    "format": "{capacity}%",
+    "format-charging": "⚡ {capacity}%",
+    "format-full": "🔋 Full",
+    "tooltip": false
+  }
+}

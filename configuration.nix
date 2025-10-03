@@ -4,6 +4,7 @@ let
 in {
   imports = [
     ./hardware-configuration.nix
+    # ./qtile.nix
     modules.system.print
     modules.system.networking
     modules.display.manager
@@ -20,12 +21,49 @@ in {
   ];
   # services.acpid.enable = lib.mkForce false;
 
+  environment.variables = {
+    QT_QPA_PLATFORM = "wayland;xcb";
+  };
+  swapDevices = [
+  {
+    device = "/swapfile";
+  }
+];
+  services.onlyoffice.enable = true;
+
+  nix.settings = {
+    http-connections = 10;
+    connect-timeout = 60;
+  };
+  services.desktopManager.cosmic.enable = true;
 
   programs.light.enable = true;
+  services.thermald.enable = true;
+  services.tlp = {
+      # enable = true;
+      settings = {
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+
+        CPU_MIN_PERF_ON_AC = 0;
+        CPU_MAX_PERF_ON_AC = 100;
+        CPU_MIN_PERF_ON_BAT = 0;
+        CPU_MAX_PERF_ON_BAT = 20;
+
+       #Optional helps save long term battery health
+       START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
+       STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+
+      };
+};
+
   nix.optimise.automatic = true;
   programs.java = {
     enable = true;
-    package = pkgs.jdk17;  # or pkgs.zulu17 if you prefer Zulu JDK
+    package = pkgs.openjdk17;  # or pkgs.zulu17 if you prefer Zulu JDK
   };
 # services.hardware.openrgb.enable = true;
 
@@ -33,6 +71,7 @@ environment.pathsToLink = [ "/libexec" ];
 nix.settings.download-buffer-size = 1073741824;
 
 services.picom.enable = true;
+programs.kdeconnect.enable = true;
 
 programs.adb.enable = true;
 services.udev.extraRules = let
@@ -49,36 +88,39 @@ services.udev.extraRules = let
     SUBSYSTEM=="usb", ATTR{idVendor}=="${idVendor}", ATTR{idProduct}=="${idProduct}", SYMLINK+="android_fastboot"
   '';
 
+services.xserver.windowManager.qtile.enable = true;
 services.xserver = {
     enable = true;
     xkb.layout = "us";
     xkb.model = "pc105";
     xkb.options = "eurosign:e, compose:menu, grp:caps_toggle";
-    xrandrHeads = [{output = "HDMI-0";primary = true;}{output = "VGA-0";}];
+    # xrandrHeads = [{output = "HDMI-0";primary = true;}{output = "VGA-0";}];
     xkb.variant = "";
         desktopManager = {
       xterm.enable = false;
       # xfce.enable = true;
     };
     defaultDepth = 24;
-      videoDriver = "nvidia";
       exportConfiguration = true;
       enableTCP = true;
       autorun = true;
-    windowManager.i3 = {
-      # enable = true;
-      extraPackages = with pkgs; [
-        dmenu
-        i3status
-        i3lock
-        i3blocks
-      ];
-    };
+    # windowManager.i3 = {
+    #   # enable = true;
+    #   extraPackages = with pkgs; [
+    #     dmenu
+    #     i3status
+    #     i3lock
+    #     i3blocks
+    #   ];
+    # };
   };  
 
-  services.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma6.enable = true;
-  # services.displayManager.defaultSession = "xfce";
+  # services.displayManager.sddm.enable = true;
+  # services.displayManager.gdm.enable = true;
+  # services.xserver.displayManager.gdm.wayland = false; # force X11
+
+  services.desktopManager.plasma6.enable = true;
+  services.displayManager.defaultSession = "xfce";
 
   nix.settings.trusted-users = [ "root" "chikoyeat" ];
   programs.xwayland.enable = true;
@@ -135,6 +177,7 @@ services.xserver = {
   };
 
   security.rtkit.enable = true;
+  services.pulseaudio.enable = false;
   
   time.timeZone = "Asia/Kolkata";
 
@@ -144,7 +187,7 @@ services.xserver = {
     bluetooth.enable = true;
   };
 
-hardware.opengl.extraPackages = [ pkgs.mesa.drivers ];
+hardware.graphics.extraPackages = [ pkgs.mesa ];
   
   environment.variables = {
     LIBVA_DRIVER_NAME = "nvidia";
@@ -153,7 +196,6 @@ hardware.opengl.extraPackages = [ pkgs.mesa.drivers ];
     WLR_NO_HARDWARE_CURSORS = "1";
   };
   boot.kernelModules = [ "nvidia" "acerhdf" "acer-wmi"  ];
-  boot.blacklistedKernelModules = [ "nouveau" ];
   
  hardware.nvidia = {
 
@@ -163,14 +205,15 @@ hardware.opengl.extraPackages = [ pkgs.mesa.drivers ];
     # powerManagement.enable = true;
 
     # powerManagement.finegrained = false;
-    open = true;
+    open = false;
     nvidiaSettings = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 
+  boot.kernelPackages = pkgs.linuxPackages_6_16;
 
   hardware.nvidia.prime = {
-      sync.enable = true;
+      # sync.enable = true;
       		# Make sure to use the correct Bus ID values for your system!
   		intelBusId = "PCI:0:2:0";
   		nvidiaBusId = "PCI:01:0:0";
