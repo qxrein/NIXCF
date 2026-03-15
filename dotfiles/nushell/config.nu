@@ -362,3 +362,5 @@ $env.ANDROID_HOME = (prepend /home/chikoyeat/Android/sdk)
 
 alias emu8086 = ~/.config/nushell/emu8086_runner.nu
 source ~/projects/nitrolit/nitrolit.nu
+alias ear = ^bluetoothctl connect 3C:B0:ED:B1:4D:DF
+alias archy = distrobox-enter --root Arch
