@@ -3,36 +3,55 @@
 let
   inherit (lib) mkOption types;
   baseTheme = themes.raw.ayu-dark;
-in {
-  options.theme = mkOption {
-    type = types.attrs;
-    default = themes.custom (baseTheme // {
-      cornerRadius = 4;
-      borderWidth = 2;
-      
-      margin = 0;
-      padding = 8;
+in
+{
+  options = {
+    theme = mkOption {
+      type = types.attrs;
+      default = themes.custom (baseTheme // {
+        cornerRadius = 4;
+        borderWidth = 2;
 
-      font = {
-        size = {
-          normal = 16;
-          big = 20;
+        margin = 0;
+        padding = 8;
+
+        font = {
+          size = {
+            normal = 16;
+            big = 20;
+          };
+          sans = {
+            name = "Lexend";
+            package = pkgs.lexend;
+          };
+          mono = {
+            name = "JetBrainsMono Nerd Font";
+            package = pkgs.nerd-fonts.jetbrains-mono;
+          };
         };
-        sans = {
-          name = "Lexend";
-          package = pkgs.lexend;
+
+        icons = {
+          name = "dracula-icon-theme";
+          package = pkgs.dracula-icon-theme;
         };
-        mono = {
-          name = "JetBrainsMono Nerd Font";
-          package = pkgs.nerd-fonts.jetbrains-mono;
-        };
+      });
+      description = "Theme configuration";
+    };
+  };
+
+  config = {
+    gtk = {
+      enable = true;
+
+      theme = {
+        name = "Ayu Dark";
+        package = pkgs.artim-dark;
       };
 
-      icons = {
-        name = "dracula-icon-theme";
-        package = pkgs.dracula-icon-theme;
+      iconTheme = {
+        name = "Colloid";
+        package = pkgs.colloid-icon-theme;
       };
-    });
-    description = "Theme configuration";
+    };
   };
 }

@@ -16,7 +16,7 @@
     starship
     wayland
     xwayland-satellite
-    rofi-wayland
+    # rofi-wayland
     helix
 
     mpv

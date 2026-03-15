@@ -2,7 +2,7 @@
 
 {
   environment.sessionVariables.NIXOS_OZONEE_WL = "1";
-# programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
   environment.sessionVariables.WLR_NO_HARDWARE_CURSORS = "1";
 
   environment.systemPackages = with pkgs; [

@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
-    ols
+    # ols
     marksman
     metals
     markdown-oxide
@@ -12,6 +12,6 @@
     ocamlPackages.ocaml-lsp
     typescript-language-server
     vhdl-ls
-    zls
+    # zls
   ];
 }
